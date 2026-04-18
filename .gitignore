@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local reference folders
+INSIPRATION/
+WEBSITE RUN PT1/
+website run p2/
+peel excavation photos/

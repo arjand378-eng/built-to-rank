@@ -1,0 +1,280 @@
+import type { Metadata } from "next";
+import { Monitor, MagnifyingGlass, ArrowCircleRight, Check, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+export const metadata: Metadata = {
+  title: "Services | Built to Rank — Web Design & SEO for Trades, GTA",
+  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses in Peel Region. Built to rank on Google.",
+};
+
+const webFeatures = [
+  "Mobile-first, fully responsive",
+  "GSAP & Framer Motion animations",
+  "Contact form with email delivery",
+  "Deployed & live in 30–47 days",
+  "SEO-ready from day one",
+  "Free revisions included",
+  "Fast load times (optimized build)",
+  "Custom photography direction",
+];
+
+const seoFeatures = [
+  "Google Business Profile guidance",
+  "Schema markup & XML sitemap",
+  "On-page keyword optimization",
+  "robots.txt & meta tags",
+  "Title & description tags",
+  "Local citation recommendations",
+];
+
+const retainerFeatures = [
+  "Monthly content & page updates",
+  "Core Web Vitals monitoring",
+  "SEO performance tracking",
+  "Priority email support",
+  "New page builds on request",
+  "Annual SEO review",
+];
+
+const faqs = [
+  {
+    q: "How long does a website take to build?",
+    a: "Most projects go live within 30 to 47 days from the discovery call. Simple sites can ship faster. I give you a clear timeline before we start so there are no surprises.",
+  },
+  {
+    q: "Do I need to have my content ready before we start?",
+    a: "No. I guide you through exactly what is needed and write the copy for your site based on your business. You review and approve everything before anything goes live.",
+  },
+  {
+    q: "What happens after the site launches?",
+    a: "You get a live site, full access to your deployment, and direct support. A monthly retainer is available if you want ongoing updates, SEO monitoring, and priority access.",
+  },
+  {
+    q: "Who do you typically work with?",
+    a: "Primarily trades businesses across the GTA including plumbers, roofers, landscapers, excavators, HVAC contractors, and painters. My focus is local businesses that need to be found on Google.",
+  },
+  {
+    q: "Will my site actually rank on Google?",
+    a: "Every site includes full SEO setup from day one: schema markup, XML sitemap, on-page keyword optimization, Google Business Profile guidance, and proper meta tags. Rankings take time but you will have the right foundation built in from the start.",
+  },
+  {
+    q: "How much does a website cost?",
+    a: "Every project is scoped and quoted individually based on what you actually need. Get in touch for a free quote with no obligation.",
+  },
+];
+
+export default function Services() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <section
+          className="relative pt-40 pb-20 px-6 overflow-hidden"
+          style={{ background: "linear-gradient(160deg,#0A0A14 0%,#0D0A1E 60%,#080810 100%)" }}
+        >
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 60% 50% at 80% 40%, rgba(109,40,217,0.1) 0%, transparent 65%)" }}
+          />
+          <div className="relative max-w-6xl mx-auto">
+            <p className="section-eyebrow mb-5">Services</p>
+            <h1
+              className="text-foreground leading-none max-w-2xl"
+              style={{
+                fontFamily: "var(--font-bebas)",
+                fontSize: "clamp(3rem,7vw,5rem)",
+                letterSpacing: "0.02em",
+              }}
+            >
+              Everything Your Trades<br />
+              <span className="text-muted-foreground">Business Needs Online.</span>
+            </h1>
+            <p className="mt-5 text-base text-foreground/65 max-w-[48ch]">
+              Custom websites. Local SEO. Ongoing support. A complete digital presence
+              built for trades businesses across Peel Region.
+            </p>
+          </div>
+        </section>
+
+        {/* Services grid */}
+        <section className="py-20 px-6 services-gradient-bg relative overflow-hidden">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 60% 50% at 50% 60%, rgba(109,40,217,0.06) 0%, transparent 70%)" }}
+          />
+          <div className="relative max-w-6xl mx-auto flex flex-col gap-6">
+
+            {/* Web Design */}
+            <Card className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+              <CardContent className="p-8 md:p-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                  <div className="flex flex-col gap-5">
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="w-11 h-11 rounded-xl flex items-center justify-center text-violet-300"
+                        style={{ background: "rgba(109,40,217,0.15)", border: "1px solid var(--border-accent)" }}
+                      >
+                        <Monitor size={22} weight="duotone" />
+                      </div>
+                      <Badge variant="outline" className="border-violet-700/40 bg-violet-900/20 text-violet-300 text-[0.68rem] tracking-widest uppercase">
+                        Most Popular
+                      </Badge>
+                    </div>
+                    <div>
+                      <h2 className="text-2xl font-bold text-foreground mb-3">Website Design & Development</h2>
+                      <p className="text-base leading-relaxed text-foreground/65">
+                        A fully custom Next.js website built mobile-first and designed to convert
+                        visitors into booked jobs. Every detail, from the layout to the copy to
+                        the animations, is built around your specific trade and your local market.
+                      </p>
+                    </div>
+                    <a
+                      href="/contact"
+                      className={cn(buttonVariants({ size: "lg" }), "self-start bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 gap-2 h-11 px-6")}
+                    >
+                      Start a Project <ArrowRight size={15} weight="bold" />
+                    </a>
+                  </div>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {webFeatures.map((f) => (
+                      <li key={f} className="flex items-center gap-2.5 text-sm text-foreground/70">
+                        <Check size={13} weight="bold" className="text-violet-500 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* SEO */}
+              <Card className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                <CardContent className="p-8 flex flex-col gap-5 h-full">
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-violet-300"
+                    style={{ background: "rgba(109,40,217,0.15)", border: "1px solid var(--border-accent)" }}
+                  >
+                    <MagnifyingGlass size={22} weight="duotone" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold text-foreground mb-2">SEO Setup & Optimization</h2>
+                    <p className="text-sm leading-relaxed text-foreground/65">
+                      Get found when locals search for your trade. Full technical SEO setup
+                      so you rank on Google from the day your site goes live.
+                    </p>
+                  </div>
+                  <ul className="flex flex-col gap-2 flex-1">
+                    {seoFeatures.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-foreground/70">
+                        <Check size={13} weight="bold" className="text-violet-500 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="/contact"
+                    className={cn(buttonVariants({ variant: "outline" }), "self-start mt-auto bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-9 px-4")}
+                  >
+                    Boost My Rankings
+                  </a>
+                </CardContent>
+              </Card>
+
+              {/* Retainer */}
+              <Card className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                <CardContent className="p-8 flex flex-col gap-5 h-full">
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-violet-300"
+                    style={{ background: "rgba(109,40,217,0.15)", border: "1px solid var(--border-accent)" }}
+                  >
+                    <ArrowCircleRight size={22} weight="duotone" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold text-foreground mb-2">Monthly Retainer</h2>
+                    <p className="text-sm leading-relaxed text-foreground/65">
+                      Your site stays fast, fresh, and climbing the rankings. Monthly
+                      updates, SEO monitoring, and priority support. All handled.
+                    </p>
+                  </div>
+                  <ul className="flex flex-col gap-2 flex-1">
+                    {retainerFeatures.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-foreground/70">
+                        <Check size={13} weight="bold" className="text-violet-500 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="/contact"
+                    className={cn(buttonVariants({ variant: "outline" }), "self-start mt-auto bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-9 px-4")}
+                  >
+                    Learn More
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 px-6" style={{ background: "#08080F" }}>
+          <div className="max-w-3xl mx-auto">
+            <p className="section-eyebrow mb-5">FAQ</p>
+            <h2
+              className="text-foreground leading-none mb-12"
+              style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2.2rem,4vw,3rem)", letterSpacing: "0.02em" }}
+            >
+              Common Questions.
+            </h2>
+            <div className="flex flex-col gap-0">
+              {faqs.map((faq, i) => (
+                <div key={i}>
+                  <div className="py-6">
+                    <p className="font-semibold text-foreground mb-2">{faq.q}</p>
+                    <p className="text-base leading-relaxed text-white/70">{faq.a}</p>
+                  </div>
+                  {i < faqs.length - 1 && <Separator className="opacity-20" />}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section
+          className="py-24 px-6"
+          style={{ background: "linear-gradient(135deg,rgba(109,40,217,0.1) 0%,rgba(79,70,229,0.06) 100%)" }}
+        >
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-5">
+            <h2
+              className="text-foreground leading-none"
+              style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2.4rem,5vw,3.8rem)", letterSpacing: "0.02em" }}
+            >
+              Ready to Start?
+            </h2>
+            <p className="text-base text-foreground/65 max-w-[42ch]">
+              Free 15-minute call. Clear quote. No surprises.
+            </p>
+            <a
+              href="/contact"
+              className={cn(buttonVariants({ size: "lg" }), "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 gap-2 h-11 px-6")}
+            >
+              Get a Free Quote <ArrowRight size={15} weight="bold" />
+            </a>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

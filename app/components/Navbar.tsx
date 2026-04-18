@@ -3,13 +3,22 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X } from "@phosphor-icons/react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Work",     href: "#work"     },
-  { label: "About",    href: "#about"    },
-  { label: "Contact",  href: "#contact"  },
+  { label: "Services", href: "/services" },
+  { label: "Work",     href: "/#work"    },
+  { label: "About",    href: "/about"    },
+  { label: "Blog",     href: "/blog"     },
+  { label: "Contact",  href: "/contact"  },
 ];
+
+const primaryLink = cn(
+  buttonVariants({ variant: "default", size: "default" }),
+  "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] h-8 px-4 active:scale-[0.98]"
+);
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,70 +36,59 @@ export default function Navbar() {
         initial={{ y: -72, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
-        className="fixed top-0 left-0 right-0 z-50"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
           background: scrolled ? "rgba(10,10,18,0.82)" : "transparent",
           backdropFilter: scrolled ? "blur(14px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "none",
-          transition: "background 0.3s, backdrop-filter 0.3s, border-color 0.3s",
         }}
       >
+        {scrolled && <Separator className="absolute bottom-0 left-0 right-0 opacity-40" />}
+
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-0.5 group">
+          <a href="/" className="flex items-center">
             <span
-              style={{ fontFamily: "var(--font-bebas)", fontSize: "1.45rem", letterSpacing: "0.04em", color: "var(--text)" }}
+              className="text-2xl text-foreground"
+              style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.04em" }}
             >
               Built to{" "}
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-bebas)",
-                fontSize: "1.45rem",
-                letterSpacing: "0.04em",
-                background: "linear-gradient(135deg, #8B5CF6, #6366F1)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                marginLeft: "0.35rem",
-              }}
-            >
-              Rank
+              <span
+                style={{
+                  background: "linear-gradient(135deg,#8B5CF6,#6366F1)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Rank
+              </span>
             </span>
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden md:flex items-center gap-6">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium transition-colors duration-150"
-                style={{ color: "var(--muted-lt)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted-lt)")}
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <a href="#contact" className="btn btn-primary text-sm !py-2 !px-5">
-              Get a Quote
-            </a>
+            <a href="/contact" className={primaryLink}>Get a Quote</a>
           </nav>
 
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden p-1"
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden text-muted-foreground hover:text-foreground"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
-            style={{ color: "var(--muted-lt)" }}
           >
-            {menuOpen ? <X size={22} weight="bold" /> : <List size={22} weight="bold" />}
-          </button>
+            {menuOpen ? <X size={20} weight="bold" /> : <List size={20} weight="bold" />}
+          </Button>
         </div>
       </motion.header>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -102,7 +100,7 @@ export default function Navbar() {
             className="fixed top-[64px] left-4 right-4 z-40 rounded-2xl p-6 flex flex-col gap-4"
             style={{
               background: "rgba(14,14,26,0.97)",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid var(--border)",
               backdropFilter: "blur(16px)",
               boxShadow: "0 24px 48px -12px rgba(0,0,0,0.6)",
             }}
@@ -114,16 +112,15 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="text-base font-medium py-2"
-                style={{ color: "var(--muted-lt)", borderBottom: "1px solid var(--border)" }}
+                className="text-base font-medium py-2 text-white/80 hover:text-white transition-colors border-b border-border"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </motion.a>
             ))}
             <a
-              href="#contact"
-              className="btn btn-primary text-center mt-1"
+              href="/contact"
+              className={cn(primaryLink, "mt-1 w-full justify-center h-9")}
               onClick={() => setMenuOpen(false)}
             >
               Get a Free Quote

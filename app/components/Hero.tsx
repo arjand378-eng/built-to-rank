@@ -2,6 +2,10 @@
 
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Star, GoogleLogo } from "@phosphor-icons/react";
+import { buttonVariants } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 const stagger: Variants = {
   hidden: {},
@@ -15,298 +19,174 @@ const fadeUp: Variants = {
     transition: { type: "spring", stiffness: 90, damping: 20 },
   },
 };
-const fadeIn: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
-};
+
+const btnPrimary = cn(
+  buttonVariants({ size: "lg" }),
+  "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-11 px-6 active:scale-[0.98]"
+);
+const btnOutline = cn(
+  buttonVariants({ variant: "outline", size: "lg" }),
+  "bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-11 px-6 active:scale-[0.98]"
+);
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col md:flex-row overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
 
-      {/* ── LEFT PANEL ─────────────────────────────────── */}
-      <div className="relative z-10 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-28 pb-16 md:py-0 md:w-[54%] lg:w-[52%]">
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ opacity: 0.55 }}
+      >
+        <source src="/3d-tech.mp4" type="video/mp4" />
+      </video>
 
-        {/* Background glow behind left panel */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          aria-hidden="true"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 0% 50%, rgba(109,40,217,0.12) 0%, transparent 70%)",
-          }}
-        />
+      {/* Inward vignette mask — fades video into page bg on all edges */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(ellipse 85% 80% at 50% 50%,
+              transparent 20%,
+              rgba(10,10,18,0.55) 60%,
+              rgba(10,10,18,0.92) 80%,
+              #0A0A12 100%
+            )
+          `,
+        }}
+      />
 
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          animate="show"
-          className="relative flex flex-col gap-6 max-w-xl"
-        >
-          {/* Eyebrow */}
-          <motion.div variants={fadeUp}>
-            <span className="label-chip">
-              Web Design + SEO — Peel Region &amp; GTA
-            </span>
-          </motion.div>
+      {/* Hard edge fade at top and bottom so section blends into navbar/next section */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-40 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, #0A0A12 0%, transparent 100%)" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-40 pointer-events-none"
+        style={{ background: "linear-gradient(to top, #0A0A12 0%, transparent 100%)" }}
+      />
 
-          {/* Headline */}
-          <motion.h1
-            variants={fadeUp}
-            style={{
-              fontFamily: "var(--font-bebas)",
-              fontSize: "clamp(3.2rem, 7vw, 5.8rem)",
-              lineHeight: 0.95,
-              letterSpacing: "0.02em",
-              color: "var(--text)",
-            }}
-          >
-            Websites That{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #A78BFA 0%, #818CF8 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Rank.
-            </span>
-            <br />
-            Clients That Call.
-          </motion.h1>
+      {/* Subtle violet centre glow */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 60% 50% at 50% 48%, rgba(109,40,217,0.14) 0%, transparent 70%)" }}
+      />
 
-          {/* Body */}
-          <motion.p
-            variants={fadeUp}
-            className="text-base md:text-lg leading-relaxed max-w-[52ch]"
-            style={{ color: "var(--muted-lt)" }}
-          >
-            We build custom, fast websites for plumbers, roofers, landscapers,
-            and contractors in Peel Region — then rank them on Google so the
-            phone rings.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mt-1">
-            <a href="#contact" className="btn btn-primary">
-              Get a Free Quote <ArrowRight size={16} weight="bold" />
-            </a>
-            <a href="#work" className="btn btn-ghost">
-              See Our Work
-            </a>
-          </motion.div>
-
-          {/* Social proof row */}
-          <motion.div
-            variants={fadeUp}
-            className="flex flex-wrap items-center gap-6 pt-2"
-          >
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} size={14} weight="fill" color="#FBBF24" />
-                ))}
-              </div>
-              <span className="text-xs font-medium" style={{ color: "var(--muted-lt)" }}>
-                5.0 on Google
-              </span>
-            </div>
-            <div
-              className="h-4 w-px"
-              style={{ background: "var(--border)" }}
-            />
-            <div className="flex items-center gap-2">
-              <GoogleLogo size={16} weight="bold" style={{ color: "#4285F4" }} />
-              <span className="text-xs font-medium" style={{ color: "var(--muted-lt)" }}>
-                Ranked in Peel Region
-              </span>
-            </div>
-            <div
-              className="h-4 w-px"
-              style={{ background: "var(--border)" }}
-            />
-            <span className="text-xs font-medium" style={{ color: "var(--muted-lt)" }}>
-              GTA-based. Fast turnaround.
-            </span>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* ── RIGHT PANEL ────────────────────────────────── */}
+      {/* Content — centred */}
       <motion.div
-        variants={fadeIn}
+        variants={stagger}
         initial="hidden"
         animate="show"
-        className="relative md:w-[46%] lg:w-[48%] min-h-[380px] md:min-h-0 flex items-center justify-center overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(145deg, #0F0F20 0%, #0A0A16 50%, #12082A 100%)",
-          borderLeft: "1px solid rgba(255,255,255,0.05)",
-        }}
+        className="relative z-10 flex flex-col items-center text-center gap-6 max-w-3xl px-6 pt-24 pb-16"
       >
-        {/* Ambient glows */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 50% at 60% 40%, rgba(109,40,217,0.22) 0%, transparent 70%)",
-            animation: "pulse-glow 5s ease-in-out infinite",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute bottom-0 right-0 w-64 h-64 rounded-full blur-[80px] pointer-events-none"
-          style={{
-            background: "rgba(79,70,229,0.18)",
-            animation: "float-slow 8s ease-in-out infinite",
-          }}
-        />
+        <motion.div variants={fadeUp}>
+          <Badge
+            variant="outline"
+            className="border-violet-700/40 bg-violet-900/20 text-violet-300 text-[0.68rem] tracking-[0.14em] uppercase px-3 py-1 rounded-full"
+          >
+            Web Design + SEO &middot; Peel Region &amp; GTA
+          </Badge>
+        </motion.div>
 
-        {/* Grid overlay */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-[0.04]"
+        <motion.h1
+          variants={fadeUp}
+          className="leading-none text-foreground"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,1) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
+            fontFamily: "var(--font-bebas)",
+            fontSize: "clamp(3.4rem,8vw,6.5rem)",
+            letterSpacing: "0.02em",
           }}
-        />
-
-        {/* Browser mockup card */}
-        <motion.div
-          initial={{ opacity: 0, y: 32, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ type: "spring", stiffness: 80, damping: 18, delay: 0.5 }}
-          className="relative z-10 w-[85%] max-w-[360px]"
-          style={{ animation: "float-slow 7s ease-in-out infinite" }}
         >
-          {/* Browser chrome */}
-          <div
-            className="rounded-xl overflow-hidden"
+          Websites That{" "}
+          <span
             style={{
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow:
-                "0 40px 80px -20px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08)",
+              background: "linear-gradient(135deg,#A78BFA 0%,#818CF8 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
-            {/* Top bar */}
-            <div
-              className="flex items-center gap-2 px-4 py-3"
-              style={{ background: "#1A1A2E", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
-            >
-              <div className="flex gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#FF5F57" }} />
-                <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#FFBD2E" }} />
-                <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#28C840" }} />
-              </div>
-              <div
-                className="flex-1 mx-2 rounded-md px-3 py-1 text-xs"
-                style={{ background: "#242436", color: "var(--muted)", fontSize: "0.65rem" }}
-              >
-                peelexcavationservices.netlify.app
-              </div>
-            </div>
+            Rank.
+          </span>
+          <br />Clients That Call.
+        </motion.h1>
 
-            {/* Fake website layout */}
-            <div
-              className="p-4 flex flex-col gap-3"
-              style={{ background: "#0D0D1A" }}
-            >
-              {/* Hero row */}
-              <div className="flex gap-2">
-                <div className="flex flex-col gap-2 flex-1">
-                  <div className="h-2 rounded-full w-3/4" style={{ background: "rgba(139,92,246,0.6)" }} />
-                  <div className="h-1.5 rounded-full w-full" style={{ background: "rgba(255,255,255,0.1)" }} />
-                  <div className="h-1.5 rounded-full w-2/3" style={{ background: "rgba(255,255,255,0.07)" }} />
-                  <div className="mt-1 flex gap-1.5">
-                    <div className="h-5 w-16 rounded" style={{ background: "linear-gradient(135deg,#6D28D9,#4F46E5)" }} />
-                    <div className="h-5 w-12 rounded" style={{ background: "rgba(255,255,255,0.08)" }} />
-                  </div>
-                </div>
-                <div className="w-20 h-20 rounded-lg" style={{ background: "rgba(109,40,217,0.25)" }} />
-              </div>
+        <motion.p
+          variants={fadeUp}
+          className="text-base md:text-lg leading-relaxed max-w-[50ch] text-white/80"
+          style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9)" }}
+        >
+          We build custom, fast websites for plumbers, roofers, landscapers, and
+          contractors in Peel Region. Then we rank them on Google so the phone rings.
+        </motion.p>
 
-              {/* Stats bar */}
-              <div
-                className="flex gap-2 rounded-lg p-2"
-                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}
-              >
-                {["47 Leads", "↑ Pg.1", "4.9★"].map((stat) => (
-                  <div key={stat} className="flex-1 text-center">
-                    <p className="text-xs font-bold" style={{ color: "#A78BFA", fontSize: "0.6rem" }}>{stat}</p>
-                  </div>
-                ))}
-              </div>
+        <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mt-1">
+          <motion.a
+            href="#contact"
+            className={btnPrimary}
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            Get a Free Quote <ArrowRight size={16} weight="bold" />
+          </motion.a>
+          <motion.a
+            href="#work"
+            className={btnOutline}
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            See Our Work
+          </motion.a>
+        </motion.div>
 
-              {/* Content rows */}
-              {[0.9, 0.7, 0.5].map((opacity, i) => (
-                <div key={i} className="flex gap-2 items-start">
-                  <div className="w-8 h-8 rounded" style={{ background: `rgba(109,40,217,${opacity * 0.3})`, flexShrink: 0 }} />
-                  <div className="flex flex-col gap-1 flex-1">
-                    <div className="h-1.5 rounded-full" style={{ background: `rgba(255,255,255,${opacity * 0.12})`, width: `${70 + i * 10}%` }} />
-                    <div className="h-1.5 rounded-full" style={{ background: `rgba(255,255,255,${opacity * 0.07})`, width: `${50 + i * 8}%` }} />
-                  </div>
-                </div>
-              ))}
-            </div>
+        <motion.div
+          variants={fadeUp}
+          className="flex flex-wrap justify-center items-center gap-3 pt-2 px-5 py-3 rounded-full"
+          style={{
+            background: "rgba(10,10,18,0.55)",
+            backdropFilter: "blur(12px)",
+            border: "1px solid rgba(255,255,255,0.08)",
+          }}
+        >
+          <div className="flex items-center gap-1.5">
+            <div className="flex">{[0,1,2,3,4].map((i) => <Star key={i} size={12} weight="fill" color="#FBBF24" />)}</div>
+            <span className="text-xs font-semibold text-white/75">5.0 Google Rating</span>
           </div>
-
-          {/* Floating rank badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 120, damping: 14, delay: 1 }}
-            className="absolute -top-4 -right-4 px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5"
-            style={{
-              background: "linear-gradient(135deg, #6D28D9, #4F46E5)",
-              boxShadow: "0 8px 24px -6px rgba(109,40,217,0.5), inset 0 1px 0 rgba(255,255,255,0.15)",
-              color: "#fff",
-              fontSize: "0.7rem",
-            }}
-          >
-            <GoogleLogo size={12} weight="bold" />
-            Ranked #1 · GTA
-          </motion.div>
-
-          {/* Floating "new lead" badge */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 16, delay: 1.3 }}
-            className="absolute -bottom-4 -left-4 px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5"
-            style={{
-              background: "#0F0F1C",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 8px 24px -6px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)",
-              color: "var(--muted-lt)",
-              fontSize: "0.7rem",
-            }}
-          >
-            <span style={{ color: "#34D399" }}>●</span> New lead — Brampton
-          </motion.div>
+          <Separator orientation="vertical" className="h-3.5 opacity-25" />
+          <div className="flex items-center gap-1.5">
+            <GoogleLogo size={13} weight="bold" style={{ color: "#4285F4" }} />
+            <span className="text-xs font-semibold text-white/75">Page 1 Ranked, GTA</span>
+          </div>
+          <Separator orientation="vertical" className="h-3.5 opacity-25" />
+          <span className="text-xs font-semibold text-white/75">Serving Peel Region</span>
         </motion.div>
       </motion.div>
 
-      {/* Scroll cue */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-8 md:left-16 lg:left-24 hidden md:flex flex-col items-start gap-2"
-        style={{ color: "var(--muted)" }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground"
       >
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
           className="w-px h-8"
-          style={{ background: "linear-gradient(to bottom, var(--violet), transparent)" }}
+          style={{ background: "linear-gradient(to bottom,var(--violet),transparent)" }}
         />
-        <span style={{ fontSize: "0.62rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-          Scroll
-        </span>
+        <span className="text-[0.62rem] tracking-[0.15em] uppercase">Scroll</span>
       </motion.div>
     </section>
   );
