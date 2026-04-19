@@ -56,7 +56,7 @@ export default function Services() {
           </h2>
           <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
             Custom websites. Local SEO. Ongoing support. A complete digital
-            presence for trades businesses across Peel Region.
+            presence for trades businesses across the GTA.
           </p>
         </motion.div>
 

@@ -7,10 +7,11 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Services | Built to Rank — Web Design & SEO for Trades, GTA",
-  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses in Peel Region. Built to rank on Google.",
+  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses across the GTA. Built to rank on Google.",
 };
 
 const webFeatures = [
@@ -76,7 +77,7 @@ export default function Services() {
       <main>
         {/* Hero */}
         <section
-          className="relative pt-40 pb-20 px-6 overflow-hidden"
+          className="relative pt-40 pb-12 px-6 overflow-hidden"
           style={{ background: "linear-gradient(160deg,#0A0A14 0%,#0D0A1E 60%,#080810 100%)" }}
         >
           <div
@@ -97,9 +98,9 @@ export default function Services() {
               Everything Your Trades<br />
               <span className="text-muted-foreground">Business Needs Online.</span>
             </h1>
-            <p className="mt-5 text-base text-foreground/65 max-w-[48ch]">
+            <p className="mt-6 text-lg text-white/80 max-w-[56ch]">
               Custom websites. Local SEO. Ongoing support. A complete digital presence
-              built for trades businesses across Peel Region.
+              built for trades businesses across the GTA.
             </p>
           </div>
         </section>
@@ -111,6 +112,7 @@ export default function Services() {
             className="absolute inset-0 pointer-events-none"
             style={{ background: "radial-gradient(ellipse 60% 50% at 50% 60%, rgba(109,40,217,0.06) 0%, transparent 70%)" }}
           />
+          <ScrollReveal animation="fadeUp">
           <div className="relative max-w-6xl mx-auto flex flex-col gap-6">
 
             {/* Web Design */}
@@ -224,6 +226,7 @@ export default function Services() {
               </Card>
             </div>
           </div>
+          </ScrollReveal>
         </section>
 
         {/* FAQ */}

@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 
 export const metadata: Metadata = {
   title: "Contact | Built to Rank — Free Quote, GTA Web Design & SEO",
-  description: "Get a free quote from Built to Rank. Web design and SEO for trades businesses in Peel Region. Usually reply within a few hours.",
+  description: "Get a free quote from Built to Rank. Web design and SEO for trades businesses across the GTA. Usually reply within a few hours.",
 };
 
 const details = [
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section
-          className="relative pt-40 pb-16 px-6 overflow-hidden"
+          className="relative pt-40 pb-12 px-6 overflow-hidden"
           style={{ background: "linear-gradient(160deg,#0A0A14 0%,#0D0A1E 60%,#080810 100%)" }}
         >
           <div
@@ -45,7 +45,7 @@ export default function ContactPage() {
               Let&apos;s Build<br />
               <span className="text-muted-foreground">Something That Ranks.</span>
             </h1>
-            <p className="mt-5 text-base text-foreground/65 max-w-[40ch]">
+            <p className="mt-6 text-lg text-white/80 max-w-[44ch]">
               Free quote. No hard sell. Usually reply within a few hours.
             </p>
           </div>

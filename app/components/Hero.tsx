@@ -93,7 +93,7 @@ export default function Hero() {
             variant="outline"
             className="border-violet-700/40 bg-violet-900/20 text-violet-300 text-[0.68rem] tracking-[0.14em] uppercase px-3 py-1 rounded-full"
           >
-            Web Design + SEO &middot; Peel Region &amp; GTA
+            Web Design + SEO &middot; GTA &amp; Ontario
           </Badge>
         </motion.div>
 
@@ -126,7 +126,7 @@ export default function Hero() {
           style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9)" }}
         >
           We build custom, fast websites for plumbers, roofers, landscapers, and
-          contractors in Peel Region. Then we rank them on Google so the phone rings.
+          contractors across the GTA. Then we rank them on Google so the phone rings.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mt-1">
@@ -169,7 +169,7 @@ export default function Hero() {
             <span className="text-xs font-semibold text-white/75">Page 1 Ranked, GTA</span>
           </div>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <span className="text-xs font-semibold text-white/75">Serving Peel Region</span>
+          <span className="text-xs font-semibold text-white/75">Serving the GTA</span>
         </motion.div>
       </motion.div>
 

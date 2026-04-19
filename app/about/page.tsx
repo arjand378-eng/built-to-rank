@@ -7,10 +7,11 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "About | Built to Rank — Web Design & SEO, GTA",
-  description: "Meet Arjan Dhillon, the GTA developer behind Built to Rank. Custom websites and local SEO for trades businesses in Peel Region.",
+  description: "Meet Arjan Dhillon, the GTA developer behind Built to Rank. Custom websites and local SEO for trades businesses across the GTA.",
 };
 
 const process = [
@@ -62,7 +63,7 @@ export default function About() {
       <main>
         {/* Hero */}
         <section
-          className="relative min-h-[60vh] flex items-end pb-20 px-6 pt-40 overflow-hidden"
+          className="relative flex items-end pb-12 px-6 pt-40 overflow-hidden"
           style={{ background: "linear-gradient(160deg,#0A0A14 0%,#0D0A1E 60%,#080810 100%)" }}
         >
           <div
@@ -89,6 +90,7 @@ export default function About() {
 
         {/* Story */}
         <section className="py-24 px-6" style={{ background: "#080810" }}>
+          <ScrollReveal animation="fadeUp">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="flex flex-col gap-6">
               <p className="section-eyebrow">The Story</p>
@@ -139,6 +141,7 @@ export default function About() {
               </p>
             </div>
           </div>
+          </ScrollReveal>
         </section>
 
         {/* Process */}
@@ -223,7 +226,7 @@ export default function About() {
                 <span className="text-muted-foreground">General Knowledge.</span>
               </h2>
               <p className="text-base leading-loose text-foreground/70">
-                I focus exclusively on trades businesses in Peel Region for one reason:
+                I focus exclusively on trades businesses across the GTA for one reason:
                 specialization beats generalization every time. I know what Brampton
                 homeowners type into Google when they need a plumber. I know what converts
                 a roofing inquiry into a booked job.

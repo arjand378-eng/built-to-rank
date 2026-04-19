@@ -8,6 +8,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Blog | Built to Rank — Web Design & SEO Tips for GTA Trades",
@@ -48,7 +49,7 @@ export default function Blog() {
       <main>
         {/* Hero */}
         <section
-          className="relative pt-40 pb-20 px-6 overflow-hidden"
+          className="relative pt-40 pb-12 px-6 overflow-hidden"
           style={{ background: "linear-gradient(160deg,#0A0A14 0%,#0D0A1E 60%,#080810 100%)" }}
         >
           <div
@@ -69,7 +70,7 @@ export default function Blog() {
               SEO & Web Design<br />
               <span className="text-muted-foreground">Guides for Trades.</span>
             </h1>
-            <p className="mt-5 text-base text-foreground/65 max-w-[48ch]">
+            <p className="mt-6 text-lg text-white/80 max-w-[56ch]">
               Practical advice on getting your trades business found online.
               No fluff, no jargon.
             </p>
@@ -80,6 +81,7 @@ export default function Blog() {
         <section className="py-20 px-6" style={{ background: "#080810" }}>
           <div className="max-w-6xl mx-auto">
             <Separator className="mb-14 opacity-30" />
+            <ScrollReveal animation="fadeUp">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
@@ -118,6 +120,7 @@ export default function Blog() {
                 </Link>
               ))}
             </div>
+            </ScrollReveal>
           </div>
         </section>
 

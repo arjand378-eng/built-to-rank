@@ -28,6 +28,7 @@ export default function Contact() {
       <div className="relative max-w-6xl mx-auto">
 
         <motion.div
+          id="contact-inner-header"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

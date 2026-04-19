@@ -19,11 +19,11 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   title: "Built to Rank | Web Design & SEO for Local Trades — GTA",
   description:
-    "Built to Rank builds custom websites and gets trades businesses in Peel Region and the GTA found on Google. Web design + SEO for plumbers, roofers, landscapers, and contractors.",
+    "Built to Rank builds custom websites and gets trades businesses across the GTA found on Google. Web design + SEO for plumbers, roofers, landscapers, and contractors.",
   openGraph: {
     title: "Built to Rank | Web Design & SEO for Local Trades — GTA",
     description:
-      "Custom websites and SEO for trades businesses in Peel Region and the GTA.",
+      "Custom websites and SEO for trades businesses across the GTA.",
     type: "website",
     locale: "en_CA",
   },

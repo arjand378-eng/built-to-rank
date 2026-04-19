@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/badge";
 const skills = [
   { icon: <Code size={15} weight="duotone" />,    label: "Next.js & React"       },
   { icon: <TrendUp size={15} weight="duotone" />, label: "SEO & Google Rankings" },
-  { icon: <MapPin size={15} weight="duotone" />,  label: "GTA & Peel Region"     },
+  { icon: <MapPin size={15} weight="duotone" />,  label: "GTA & Ontario"        },
 ];
 const stats = [
   { value: "2",    label: "Sites Live"        },
@@ -139,7 +139,7 @@ export default function About() {
                 </div>
                 <Separator className="opacity-20" />
                 <p className="text-xs text-muted-foreground">
-                  Serving Brampton, Mississauga, Caledon & surrounding Peel Region.
+                  Serving Brampton, Mississauga, Vaughan & the GTA.
                 </p>
               </CardContent>
             </Card>
