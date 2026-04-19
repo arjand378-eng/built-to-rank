@@ -6,6 +6,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import MagneticButton from "./MagneticButton";
 
 const stagger: Variants = {
   hidden: {},
@@ -130,24 +131,24 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mt-1">
-          <motion.a
-            href="#contact"
-            className={btnPrimary}
-            whileHover={{ scale: 1.04, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            Get a Free Quote <ArrowRight size={16} weight="bold" />
-          </motion.a>
-          <motion.a
-            href="#work"
-            className={btnOutline}
-            whileHover={{ scale: 1.04, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            See Our Work
-          </motion.a>
+          <MagneticButton>
+            <motion.a
+              href="#contact"
+              className={btnPrimary}
+              whileTap={{ scale: 0.97 }}
+            >
+              Get a Free Quote <ArrowRight size={16} weight="bold" />
+            </motion.a>
+          </MagneticButton>
+          <MagneticButton>
+            <motion.a
+              href="#work"
+              className={btnOutline}
+              whileTap={{ scale: 0.97 }}
+            >
+              See Our Work
+            </motion.a>
+          </MagneticButton>
         </motion.div>
 
         <motion.div

@@ -6,6 +6,7 @@ import { List, X } from "@phosphor-icons/react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import MagneticButton from "./MagneticButton";
 
 const links = [
   { label: "Services", href: "/services" },
@@ -74,7 +75,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="/contact" className={primaryLink}>Get a Quote</a>
+            <MagneticButton><a href="/contact" className={primaryLink}>Get a Quote</a></MagneticButton>
           </nav>
 
           <Button
