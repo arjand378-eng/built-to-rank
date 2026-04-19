@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "./components/CustomCursor";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -38,10 +37,7 @@ export default function RootLayout({
       lang="en"
       className={`${geist.variable} ${bebasNeue.variable}`}
     >
-      <body>
-        <CustomCursor />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
