@@ -214,7 +214,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <section className="py-16 px-6" style={{ background: "#080810" }}>
           <div className="max-w-3xl mx-auto">
             <Separator className="mb-12 opacity-30" />
-            <div className="text-base leading-loose text-white/75">
+            <div className="text-base leading-relaxed text-white/85">
               {post.content}
             </div>
             <Separator className="mt-16 mb-10 opacity-30" />

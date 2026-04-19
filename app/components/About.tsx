@@ -57,13 +57,13 @@ export default function About() {
               Work For Trades.
             </h2>
 
-            <p className="text-base leading-loose max-w-[52ch] text-foreground/70">
+            <p className="text-base leading-relaxed max-w-[52ch] text-white/85">
               I build production-quality websites for trades businesses across Peel
               Region and the GTA. My first client was a friend&apos;s uncle running an
               excavation company in Brampton. That project showed me how much a real
               website changes the game for local trades.
             </p>
-            <p className="text-base leading-loose max-w-[52ch] text-foreground/70">
+            <p className="text-base leading-relaxed max-w-[52ch] text-white/85">
               No templates. No agencies with 20 middlemen. Just a developer who
               understands the local trades niche and builds sites that actually get
               found on Google.

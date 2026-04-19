@@ -91,7 +91,7 @@ export default function Services() {
 
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-foreground">Website Design & Development</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-white/80">
                     Custom Next.js sites built mobile-first. Fast, animated,
                     production-quality. Designed to turn visitors into booked jobs.
                   </p>
@@ -106,7 +106,7 @@ export default function Services() {
                     "SEO-ready from day one",
                     "Free revisions included",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <li key={item} className="flex items-center gap-2 text-sm text-white/80">
                       <Check size={14} weight="bold" className="text-violet-600 shrink-0" />
                       {item}
                     </li>
@@ -142,7 +142,7 @@ export default function Services() {
 
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-foreground">SEO Setup & Optimization</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-white/80">
                     Get found when locals search for your trade. We handle the
                     technical side so you rank on Google.
                   </p>
@@ -155,7 +155,7 @@ export default function Services() {
                     "On-page keyword optimization",
                     "robots.txt & meta tags",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <li key={item} className="flex items-center gap-2 text-sm text-white/80">
                       <Check size={14} weight="bold" className="text-violet-600 shrink-0" />
                       {item}
                     </li>

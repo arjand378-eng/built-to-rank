@@ -149,7 +149,7 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-white/80">
                     A full custom Next.js website with cinematic video hero, GSAP word
                     reveal animations, parallax scroll, and a Framer Motion entrance
                     flow. Deployed in under 47 days with full SEO setup from day one.

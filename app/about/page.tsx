@@ -89,28 +89,28 @@ export default function About() {
         </section>
 
         {/* Story */}
-        <section className="py-24 px-6" style={{ background: "#080810" }}>
+        <section className="pt-14 pb-20 px-6" style={{ background: "#080810" }}>
           <ScrollReveal animation="fadeUp">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="flex flex-col gap-6">
               <p className="section-eyebrow">The Story</p>
-              <p className="text-base leading-loose text-foreground/70">
+              <p className="text-base leading-relaxed text-white/85">
                 I got into web design through a simple door: a friend&apos;s uncle who runs an
                 excavation company in Brampton needed a website. He&apos;d been in business for
                 years but had zero digital presence. No site, not ranking on Google, losing
                 jobs to competitors who showed up online.
               </p>
-              <p className="text-base leading-loose text-foreground/70">
+              <p className="text-base leading-relaxed text-white/85">
                 I built him a full custom website from scratch. Video hero, scroll animations,
                 contact form, full SEO setup. Launched in 47 days. A few months later, he was
                 getting calls from people who found him on Google. That had never happened before.
               </p>
-              <p className="text-base leading-loose text-foreground/70">
+              <p className="text-base leading-relaxed text-white/85">
                 That project showed me two things: trades businesses in the GTA desperately need
                 quality websites, and most of them are getting ripped off by cheap template shops
                 or ignored by big agencies.
               </p>
-              <p className="text-base leading-loose text-foreground/70">
+              <p className="text-base leading-relaxed text-white/85">
                 Built to Rank is my answer to that.
               </p>
             </div>
@@ -225,13 +225,13 @@ export default function About() {
                 Niche Expertise Beats<br />
                 <span className="text-muted-foreground">General Knowledge.</span>
               </h2>
-              <p className="text-base leading-loose text-foreground/70">
+              <p className="text-base leading-relaxed text-white/85">
                 I focus exclusively on trades businesses across the GTA for one reason:
                 specialization beats generalization every time. I know what Brampton
                 homeowners type into Google when they need a plumber. I know what converts
                 a roofing inquiry into a booked job.
               </p>
-              <p className="text-base leading-loose text-foreground/70">
+              <p className="text-base leading-relaxed text-white/85">
                 A general web agency has to learn your industry from scratch every time.
                 I already know it. That means faster builds, better copy, and a site
                 that actually speaks to your customers.
@@ -286,7 +286,7 @@ export default function About() {
             >
               Ready to Get Found on Google?
             </h2>
-            <p className="text-base text-foreground/65 max-w-[48ch]">
+            <p className="text-base text-white/80 max-w-[48ch]">
               Free 15-minute call. No pitch, no pressure. Just a real conversation about your business.
             </p>
             <a

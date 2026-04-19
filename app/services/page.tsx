@@ -133,7 +133,7 @@ export default function Services() {
                     </div>
                     <div>
                       <h2 className="text-2xl font-bold text-foreground mb-3">Website Design & Development</h2>
-                      <p className="text-base leading-relaxed text-foreground/65">
+                      <p className="text-base leading-relaxed text-white/85">
                         A fully custom Next.js website built mobile-first and designed to convert
                         visitors into booked jobs. Every detail, from the layout to the copy to
                         the animations, is built around your specific trade and your local market.
@@ -148,7 +148,7 @@ export default function Services() {
                   </div>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {webFeatures.map((f) => (
-                      <li key={f} className="flex items-center gap-2.5 text-sm text-foreground/70">
+                      <li key={f} className="flex items-center gap-2.5 text-sm text-white/80">
                         <Check size={13} weight="bold" className="text-violet-500 shrink-0" />
                         {f}
                       </li>
@@ -170,14 +170,14 @@ export default function Services() {
                   </div>
                   <div>
                     <h2 className="text-xl font-bold text-foreground mb-2">SEO Setup & Optimization</h2>
-                    <p className="text-sm leading-relaxed text-foreground/65">
+                    <p className="text-sm leading-relaxed text-white/80">
                       Get found when locals search for your trade. Full technical SEO setup
                       so you rank on Google from the day your site goes live.
                     </p>
                   </div>
                   <ul className="flex flex-col gap-2 flex-1">
                     {seoFeatures.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm text-foreground/70">
+                      <li key={f} className="flex items-center gap-2 text-sm text-white/80">
                         <Check size={13} weight="bold" className="text-violet-500 shrink-0" />
                         {f}
                       </li>
@@ -203,14 +203,14 @@ export default function Services() {
                   </div>
                   <div>
                     <h2 className="text-xl font-bold text-foreground mb-2">Monthly Retainer</h2>
-                    <p className="text-sm leading-relaxed text-foreground/65">
+                    <p className="text-sm leading-relaxed text-white/80">
                       Your site stays fast, fresh, and climbing the rankings. Monthly
                       updates, SEO monitoring, and priority support. All handled.
                     </p>
                   </div>
                   <ul className="flex flex-col gap-2 flex-1">
                     {retainerFeatures.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm text-foreground/70">
+                      <li key={f} className="flex items-center gap-2 text-sm text-white/80">
                         <Check size={13} weight="bold" className="text-violet-500 shrink-0" />
                         {f}
                       </li>
@@ -244,7 +244,7 @@ export default function Services() {
                 <div key={i}>
                   <div className="py-6">
                     <p className="font-semibold text-foreground mb-2">{faq.q}</p>
-                    <p className="text-base leading-relaxed text-white/70">{faq.a}</p>
+                    <p className="text-base leading-relaxed text-white/85">{faq.a}</p>
                   </div>
                   {i < faqs.length - 1 && <Separator className="opacity-20" />}
                 </div>
