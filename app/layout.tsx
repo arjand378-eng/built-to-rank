@@ -31,11 +31,13 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: siteUrl,
     siteName: "Built to Rank",
+    images: [{ url: `${siteUrl}/og-image.jpg`, width: 1200, height: 630, alt: "Built to Rank — Web Design & SEO for GTA Trades" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Web Design & SEO for GTA Trades | Built to Rank",
     description: "Custom websites and SEO for trades businesses across the GTA.",
+    images: [`${siteUrl}/og-image.jpg`],
   },
 };
 

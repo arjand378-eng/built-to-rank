@@ -47,14 +47,14 @@ const retainerFeatures = [
 const pricing = [
   {
     name: "Website Design",
-    from: "$1,500",
+    from: "$500",
     desc: "A full custom website built around your trade. No templates.",
     features: ["Up to 5 pages", "Mobile-first design", "Contact form", "Basic SEO setup", "Free revisions"],
     highlight: false,
   },
   {
     name: "Website + SEO Bundle",
-    from: "$2,200",
+    from: "$800",
     desc: "The full package. Custom site and complete SEO setup from day one.",
     features: ["Everything in Website Design", "Schema markup & sitemap", "Google Business Profile guidance", "On-page keyword optimization", "Page 1 strategy"],
     highlight: true,

@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 const faqs = [
   {
     q: "How much does a website cost?",
-    a: "Most trades websites start at $1,500–$2,500. The final price depends on how many pages you need and what features matter to your business — a plumber with 3 services is different from a general contractor with 10. You'll get a clear quote before anything starts. No surprises, no hidden fees.",
+    a: "Most trades websites start at $500–$800. The final price depends on how many pages you need and what features matter to your business — a plumber with 3 services is different from a general contractor with 10. You'll get a clear quote before anything starts. No surprises, no hidden fees.",
   },
   {
     q: "How long does it take?",
