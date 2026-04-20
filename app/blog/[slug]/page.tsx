@@ -16,8 +16,8 @@ const posts: Record<string, {
   content: React.ReactNode;
 }> = {
   "why-trades-businesses-need-a-website-peel-region": {
-    title: "Why Every Trades Business in Peel Region Needs a Website in 2025",
-    date: "March 15, 2025",
+    title: "Why Every Trades Business in Peel Region Needs a Website in 2026",
+    date: "March 15, 2026",
     readTime: "5 min read",
     category: "Business",
     content: (
@@ -63,7 +63,7 @@ const posts: Record<string, {
 
   "local-seo-contractors-brampton": {
     title: "Local SEO for Contractors: How to Rank on Google in Your City",
-    date: "February 28, 2025",
+    date: "February 28, 2026",
     readTime: "7 min read",
     category: "SEO",
     content: (
@@ -107,9 +107,9 @@ const posts: Record<string, {
     ),
   },
 
-  "what-trades-website-must-have-2025": {
+  "what-trades-website-must-have-2026": {
     title: "5 Things Your Trades Business Website Must Have (And Most Don't)",
-    date: "February 10, 2025",
+    date: "February 10, 2026",
     readTime: "4 min read",
     category: "Web Design",
     content: (
@@ -148,13 +148,25 @@ export async function generateStaticParams() {
   return Object.keys(posts).map((slug) => ({ slug }));
 }
 
+const descriptions: Record<string, string> = {
+  "why-trades-businesses-need-a-website-peel-region":
+    "If you're a plumber, roofer, or landscaper in Peel Region without a website, you're handing jobs to competitors every day. Here's exactly why — and how to fix it.",
+  "local-seo-contractors-brampton":
+    "Local SEO is how trades businesses in Brampton and Mississauga show up when customers search. A complete, no-fluff guide to ranking on Google in your city.",
+  "what-trades-website-must-have-2026":
+    "Most trades business websites fail because they're missing the basics. Here are 5 things that separate a website that gets calls from one that just sits there.",
+};
+
+const base = "https://builttorankk.netlify.app";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return { title: "Post Not Found | Built to Rank" };
   return {
     title: `${post.title} | Built to Rank`,
-    description: post.title,
+    description: descriptions[slug] ?? post.title,
+    alternates: { canonical: `${base}/blog/${slug}` },
   };
 }
 

@@ -12,15 +12,16 @@ import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Blog | Built to Rank — Web Design & SEO Tips for GTA Trades",
-  description: "Practical guides on web design, local SEO, and digital marketing for trades businesses in Peel Region and the GTA.",
+  description: "Practical guides on web design, local SEO, and digital marketing for trades businesses across the GTA.",
+  alternates: { canonical: "https://builttorankk.netlify.app/blog" },
 };
 
 const posts = [
   {
     slug: "why-trades-businesses-need-a-website-peel-region",
-    title: "Why Every Trades Business in Peel Region Needs a Website in 2025",
+    title: "Why Every Trades Business in Peel Region Needs a Website in 2026",
     excerpt: "If you're a plumber, roofer, or landscaper in Peel Region and you don't have a website, you're handing jobs to your competitors every day. Here's exactly why that's happening and how to fix it.",
-    date: "March 15, 2025",
+    date: "March 15, 2026",
     readTime: "5 min read",
     category: "Business",
   },
@@ -28,15 +29,15 @@ const posts = [
     slug: "local-seo-contractors-brampton",
     title: "Local SEO for Contractors: How to Rank on Google in Your City",
     excerpt: "Local SEO is how trades businesses in Brampton and Mississauga show up when potential customers search. This is the complete, no-fluff guide to getting found.",
-    date: "February 28, 2025",
+    date: "February 28, 2026",
     readTime: "7 min read",
     category: "SEO",
   },
   {
-    slug: "what-trades-website-must-have-2025",
+    slug: "what-trades-website-must-have-2026",
     title: "5 Things Your Trades Business Website Must Have (And Most Don't)",
     excerpt: "Most trades business websites fail because they're missing the basics. Here's what separates a website that gets calls from one that just sits there.",
-    date: "February 10, 2025",
+    date: "February 10, 2026",
     readTime: "4 min read",
     category: "Web Design",
   },

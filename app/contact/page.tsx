@@ -9,6 +9,7 @@ import Contact from "../components/Contact";
 export const metadata: Metadata = {
   title: "Contact | Built to Rank — Free Quote, GTA Web Design & SEO",
   description: "Get a free quote from Built to Rank. Web design and SEO for trades businesses across the GTA. Usually reply within a few hours.",
+  alternates: { canonical: "https://builttorankk.netlify.app/contact" },
 };
 
 const details = [

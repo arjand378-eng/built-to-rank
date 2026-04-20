@@ -12,6 +12,7 @@ import ScrollReveal from "../components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Services | Built to Rank — Web Design & SEO for Trades, GTA",
   description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses across the GTA. Built to rank on Google.",
+  alternates: { canonical: "https://builttorankk.netlify.app/services" },
 };
 
 const webFeatures = [

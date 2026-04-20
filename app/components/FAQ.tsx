@@ -35,8 +35,22 @@ const faqs = [
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a },
+    })),
+  };
+
   return (
     <section className="relative py-28 px-6 overflow-hidden" style={{ background: "#0A0A12" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
