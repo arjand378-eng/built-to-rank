@@ -46,7 +46,7 @@ const schema = {
   "description": "Custom web design and SEO for trades businesses across the GTA, Ontario.",
   "url": siteUrl,
   "telephone": "+16476578525",
-  "email": "info@builttorank.com",
+  "email": "builttorank@hotmail.com",
   "founder": { "@type": "Person", "name": "Arjan Dhillon" },
   "address": {
     "@type": "PostalAddress",

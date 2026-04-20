@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const details = [
-  { icon: <EnvelopeSimple size={17} weight="duotone" />, label: "Email", value: "info@builttorank.com", href: "mailto:info@builttorank.com" },
+  { icon: <EnvelopeSimple size={17} weight="duotone" />, label: "Email", value: "builttorank@hotmail.com", href: "mailto:builttorank@hotmail.com" },
   { icon: <Phone size={17} weight="duotone" />, label: "Phone", value: "647-657-8525", href: "tel:+16476578525" },
   { icon: <MapPin size={17} weight="duotone" />, label: "Location", value: "GTA, Ontario, Canada", href: null },
 ];
