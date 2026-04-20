@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Star, GoogleLogo } from "@phosphor-icons/react";
+import { ArrowRight } from "@phosphor-icons/react";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -159,17 +159,11 @@ export default function Hero() {
             border: "1px solid rgba(255,255,255,0.08)",
           }}
         >
-          <div className="flex items-center gap-1.5">
-            <div className="flex">{[0,1,2,3,4].map((i) => <Star key={i} size={12} weight="fill" color="#FBBF24" />)}</div>
-            <span className="text-xs font-semibold text-white/75">5.0 Google Rating</span>
-          </div>
+          <span className="text-xs font-semibold text-white/75">1 Site Delivered</span>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <div className="flex items-center gap-1.5">
-            <GoogleLogo size={13} weight="bold" style={{ color: "#4285F4" }} />
-            <span className="text-xs font-semibold text-white/75">Page 1 Ranked, GTA</span>
-          </div>
+          <span className="text-xs font-semibold text-white/75">47 Days to Launch</span>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <span className="text-xs font-semibold text-white/75">Serving the GTA</span>
+          <span className="text-xs font-semibold text-white/75">GTA-Based</span>
         </motion.div>
       </motion.div>
 

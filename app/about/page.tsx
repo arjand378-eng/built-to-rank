@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ArrowRight, Check, Code, MagnifyingGlass, Rocket, ChatCircle } from "@phosphor-icons/react/dist/ssr";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
@@ -44,8 +43,6 @@ const process = [
     desc: "Deployed, live, and tested on every device. You get a site that works — and support from there if you need it.",
   },
 ];
-
-const stack = ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "Netlify", "SEO Schema", "Nodemailer"];
 
 const guarantees = [
   "30–47 day delivery",
@@ -247,24 +244,6 @@ export default function About() {
                 >
                   {trade}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Tech Stack */}
-        <section className="py-20 px-6" style={{ background: "linear-gradient(160deg,#0B0B14,#090910)" }}>
-          <div className="max-w-6xl mx-auto">
-            <p className="section-eyebrow mb-8">What I Build With</p>
-            <div className="flex flex-wrap gap-2">
-              {stack.map((tech) => (
-                <Badge
-                  key={tech}
-                  variant="outline"
-                  className="border-white/10 bg-card text-muted-foreground text-sm gap-1.5 py-2 px-4 rounded-xl"
-                >
-                  {tech}
-                </Badge>
               ))}
             </div>
           </div>

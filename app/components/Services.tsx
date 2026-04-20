@@ -99,12 +99,12 @@ export default function Services() {
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
-                    "Mobile-first, fully responsive",
-                    "GSAP & Framer Motion animations",
-                    "Contact form with email delivery",
-                    "Deployed & live in days",
+                    "Mobile-first, looks great on any phone",
+                    "Smooth animations — premium feel",
+                    "Contact form that emails you directly",
+                    "Live and fast in 30–47 days",
                     "SEO-ready from day one",
-                    "Free revisions included",
+                    "Free revisions until you're happy",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-white/80">
                       <Check size={14} weight="bold" className="text-violet-600 shrink-0" />
