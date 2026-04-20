@@ -1,53 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Separator } from "@/components/ui/separator";
 
 const stats = [
-  { value: "1",    label: "Site Launched"         },
-  { value: "47",   label: "Days to Go Live"        },
-  { value: "Pg.1", label: "Google Ranking"         },
-  { value: "100%", label: "Custom — No Templates"  },
+  { value: "1",    label: "Site Launched",        sub: "and counting"         },
+  { value: "47",   label: "Days to Go Live",       sub: "start to launch"      },
+  { value: "Pg.1", label: "Google Ranking",        sub: "for our first client" },
+  { value: "100%", label: "Custom Built",          sub: "zero templates"       },
 ];
 
 export default function StatsBar() {
   return (
-    <div
-      className="relative py-10 px-6 overflow-hidden"
-      style={{ background: "#07070E", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+    <section
+      className="py-16 px-6"
+      style={{ background: "#07070E" }}
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map(({ value, label }, i) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, type: "spring", stiffness: 90, damping: 20 }}
-              className="flex flex-col items-center text-center gap-1"
+      <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {stats.map(({ value, label, sub }, i) => (
+          <motion.div
+            key={label}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1, type: "spring", stiffness: 80, damping: 18 }}
+            className="relative flex flex-col items-center text-center px-6 py-10 rounded-2xl overflow-hidden"
+            style={{
+              background: "#0D0D1C",
+              border: "1px solid rgba(255,255,255,0.07)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
+            }}
+          >
+            {/* Glow */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "radial-gradient(ellipse 70% 50% at 50% 80%, rgba(109,40,217,0.12) 0%, transparent 70%)" }}
+            />
+            <span
+              className="relative text-foreground leading-none mb-3"
+              style={{
+                fontFamily: "var(--font-bebas)",
+                fontSize: "clamp(3.8rem,8vw,6.5rem)",
+                letterSpacing: "0.02em",
+                lineHeight: 1,
+              }}
             >
-              <span
-                className="text-violet-300"
-                style={{
-                  fontFamily: "var(--font-bebas)",
-                  fontSize: "clamp(2rem,4vw,2.8rem)",
-                  letterSpacing: "0.04em",
-                  lineHeight: 1,
-                }}
-              >
-                {value}
-              </span>
-              <span className="text-xs font-medium text-white/50 tracking-wide uppercase">{label}</span>
-            </motion.div>
-          ))}
-        </div>
+              {value}
+            </span>
+            <span className="relative text-sm font-bold text-white/90 tracking-wide uppercase mb-1">
+              {label}
+            </span>
+            <span className="relative text-xs text-white/35 tracking-wide">
+              {sub}
+            </span>
+          </motion.div>
+        ))}
       </div>
-
-      {/* Dividers between stats on desktop */}
-      <div className="hidden md:block absolute inset-y-0 left-1/4 w-px" style={{ background: "rgba(255,255,255,0.05)", top: "20%", bottom: "20%", height: "60%", margin: "auto 0" }} />
-      <div className="hidden md:block absolute inset-y-0 left-1/2 w-px" style={{ background: "rgba(255,255,255,0.05)", top: "20%", bottom: "20%", height: "60%", margin: "auto 0" }} />
-      <div className="hidden md:block absolute inset-y-0 left-3/4 w-px" style={{ background: "rgba(255,255,255,0.05)", top: "20%", bottom: "20%", height: "60%", margin: "auto 0" }} />
-    </div>
+    </section>
   );
 }
