@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "GPTBot", disallow: "/" },
       { userAgent: "Google-Extended", disallow: "/" },
     ],
-    sitemap: "https://builttorankk.netlify.app/sitemap.xml",
+    sitemap: "https://builttorank.ca/sitemap.xml",
   };
 }

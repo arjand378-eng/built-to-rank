@@ -16,7 +16,7 @@ const bebasNeue = Bebas_Neue({
   display: "swap",
 });
 
-const siteUrl = "https://builttorankk.netlify.app";
+const siteUrl = "https://builttorank.ca";
 
 export const metadata: Metadata = {
   title: "Web Design & SEO for GTA Trades | Built to Rank",

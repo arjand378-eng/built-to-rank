@@ -157,7 +157,7 @@ const descriptions: Record<string, string> = {
     "Most trades business websites fail because they're missing the basics. Here are 5 things that separate a website that gets calls from one that just sits there.",
 };
 
-const base = "https://builttorankk.netlify.app";
+const base = "https://builttorank.ca";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

@@ -107,12 +107,20 @@ export default function Portfolio() {
                         </div>
                       </div>
                       <div style={{ background: "#080810" }}>
-                        <img
-                          src="/peel-excavation-preview.png"
-                          alt="Peel Excavation Services website screenshot"
-                          className="w-full object-cover object-top"
-                          style={{ maxHeight: "220px" }}
-                        />
+                        <picture>
+                          <source srcSet="/peel-excavation-preview.avif" type="image/avif" />
+                          <source srcSet="/peel-excavation-preview.jpg" type="image/jpeg" />
+                          <img
+                            src="/peel-excavation-preview.jpg"
+                            alt="Peel Excavation Services website — custom Next.js site built for a Brampton excavation contractor"
+                            width={840}
+                            height={432}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full object-cover object-top"
+                            style={{ maxHeight: "220px" }}
+                          />
+                        </picture>
                       </div>
                     </div>
                   </div>

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -s format webp \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/public/peel-excavation-preview.png\" --out \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/public/peel-excavation-preview.webp\")",
+      "Bash(xargs sed *)"
+    ]
+  }
+}

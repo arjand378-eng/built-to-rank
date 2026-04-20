@@ -13,7 +13,7 @@ import ScrollReveal from "../components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Blog | Built to Rank — Web Design & SEO Tips for GTA Trades",
   description: "Practical guides on web design, local SEO, and digital marketing for trades businesses across the GTA.",
-  alternates: { canonical: "https://builttorankk.netlify.app/blog" },
+  alternates: { canonical: "https://builttorank.ca/blog" },
 };
 
 const posts = [

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const base = "https://builttorankk.netlify.app";
+const base = "https://builttorank.ca";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

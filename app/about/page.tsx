@@ -11,7 +11,7 @@ import ScrollReveal from "../components/ScrollReveal";
 export const metadata: Metadata = {
   title: "About | Built to Rank — Web Design & SEO, GTA",
   description: "Meet Arjan Dhillon, the GTA developer behind Built to Rank. Custom websites and local SEO for trades businesses across the GTA.",
-  alternates: { canonical: "https://builttorankk.netlify.app/about" },
+  alternates: { canonical: "https://builttorank.ca/about" },
 };
 
 const process = [
