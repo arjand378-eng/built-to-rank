@@ -150,9 +150,9 @@ export default function Portfolio() {
                   </div>
 
                   <p className="text-sm leading-relaxed text-white/80">
-                    A full custom Next.js website with cinematic video hero, GSAP word
-                    reveal animations, parallax scroll, and a Framer Motion entrance
-                    flow. Deployed in under 47 days with full SEO setup from day one.
+                    Full custom website built from scratch — cinematic video hero,
+                    smooth scroll animations, and a contact form that emails the client
+                    directly. Launched in under 47 days with full SEO setup from day one.
                   </p>
 
                   {/* Stats */}
@@ -177,12 +177,12 @@ export default function Portfolio() {
                   {/* Checklist */}
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                     {[
-                      "GSAP Scroll Animations",
-                      "Cinematic Video Hero",
-                      "Framer Motion Entrances",
-                      "Contact Form + Nodemailer",
-                      "Full SEO (schema, sitemap, OG)",
-                      "Deployed on Netlify",
+                      "Smooth scroll animations",
+                      "Cinematic video hero",
+                      "Premium page animations",
+                      "Contact form — emails client directly",
+                      "Full SEO setup from day one",
+                      "Live and fast on mobile",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Check size={12} weight="bold" className="text-violet-600 shrink-0" />

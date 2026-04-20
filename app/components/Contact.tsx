@@ -15,9 +15,25 @@ const inputCls =
 export default function Contact() {
   const [form, setForm] = useState({ name: "", business: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const data = new FormData(e.currentTarget);
+      data.append("access_key", "REPLACE_WITH_WEB3FORMS_KEY");
+      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+      const json = await res.json();
+      if (json.success) setSubmitted(true);
+    } catch {
+      // silently fail — user sees the form still
+    }
+    setLoading(false);
+  };
 
   return (
     <section id="contact" className="services-gradient-bg relative py-28 px-6 overflow-hidden">
@@ -75,7 +91,7 @@ export default function Contact() {
               <Card className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
                 <CardContent className="p-8">
                   <form
-                    onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+                    onSubmit={onSubmit}
                     className="flex flex-col gap-5"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -121,9 +137,10 @@ export default function Contact() {
                     </div>
                     <Button
                       type="submit"
-                      className="self-start bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-5 active:scale-[0.98]"
+                      disabled={loading}
+                      className="self-start bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-5 active:scale-[0.98] disabled:opacity-60"
                     >
-                      Send Message <PaperPlaneTilt size={15} weight="bold" />
+                      {loading ? "Sending…" : <><span>Send Message</span><PaperPlaneTilt size={15} weight="bold" /></>}
                     </Button>
                   </form>
                 </CardContent>
