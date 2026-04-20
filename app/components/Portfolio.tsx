@@ -9,11 +9,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-const tags = ["Next.js", "GSAP", "Framer Motion", "Nodemailer", "Netlify", "SEO"];
+const tags = ["Custom Build", "Mobile-First", "SEO Setup", "Fast Load Times", "GTA"];
 const results = [
-  { value: "47", label: "Days to Launch" },
-  { value: "Pg.1", label: "Google Ranking" },
-  { value: "4.9★", label: "Client Rating" },
+  { value: "47",   label: "Days to Launch"  },
+  { value: "Pg.1", label: "Google Ranking"  },
+  { value: "100%", label: "Custom Built"    },
 ];
 
 export default function Portfolio() {

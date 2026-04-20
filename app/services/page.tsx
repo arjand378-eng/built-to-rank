@@ -131,9 +131,9 @@ export default function Services() {
                     <div>
                       <h2 className="text-2xl font-bold text-foreground mb-3">Website Design & Development</h2>
                       <p className="text-base leading-relaxed text-white/85">
-                        A fully custom Next.js website built mobile-first and designed to convert
-                        visitors into booked jobs. Every detail, from the layout to the copy to
-                        the animations, is built around your specific trade and your local market.
+                        A fully custom website built mobile-first and designed to convert
+                        visitors into booked jobs. Every detail — the layout, the copy, the
+                        animations — is built around your specific trade and your local market.
                       </p>
                     </div>
                     <a

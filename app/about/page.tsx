@@ -263,10 +263,10 @@ export default function About() {
                 letterSpacing: "0.02em",
               }}
             >
-              Ready to Get Found on Google?
+              Let&apos;s Work Together.
             </h2>
             <p className="text-base text-white/80 max-w-[48ch]">
-              Free 15-minute call. No pitch, no pressure. Just a real conversation about your business.
+              Free 15-minute call. No pitch, no pressure. Just a real conversation about your business and what a website could do for it.
             </p>
             <a
               href="/contact"
