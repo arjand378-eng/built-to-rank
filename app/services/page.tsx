@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Monitor, MagnifyingGlass, ArrowCircleRight, Check, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { Monitor, MagnifyingGlass, ArrowCircleRight, Check, ArrowRight, Star } from "@phosphor-icons/react/dist/ssr";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 };
 
 const webFeatures = [
-  "Mobile-first, fully responsive",
-  "GSAP & Framer Motion animations",
-  "Contact form with email delivery",
-  "Deployed & live in 30–47 days",
+  "Mobile-first, looks great on any phone",
+  "Smooth animations — premium feel",
+  "Contact form that emails you directly",
+  "Live and fast in 30–47 days",
   "SEO-ready from day one",
-  "Free revisions included",
-  "Fast load times (optimized build)",
-  "Custom photography direction",
+  "Free revisions until you're happy",
+  "Fast load times on all devices",
+  "Copy written around your trade",
 ];
 
 const seoFeatures = [
@@ -43,30 +43,27 @@ const retainerFeatures = [
   "Annual SEO review",
 ];
 
-const faqs = [
+const pricing = [
   {
-    q: "How long does a website take to build?",
-    a: "Most projects go live within 30 to 47 days from the discovery call. Simple sites can ship faster. I give you a clear timeline before we start so there are no surprises.",
+    name: "Website Design",
+    from: "$1,500",
+    desc: "A full custom website built around your trade. No templates.",
+    features: ["Up to 5 pages", "Mobile-first design", "Contact form", "Basic SEO setup", "Free revisions"],
+    highlight: false,
   },
   {
-    q: "Do I need to have my content ready before we start?",
-    a: "No. I guide you through exactly what is needed and write the copy for your site based on your business. You review and approve everything before anything goes live.",
+    name: "Website + SEO Bundle",
+    from: "$2,200",
+    desc: "The full package. Custom site and complete SEO setup from day one.",
+    features: ["Everything in Website Design", "Schema markup & sitemap", "Google Business Profile guidance", "On-page keyword optimization", "Page 1 strategy"],
+    highlight: true,
   },
   {
-    q: "What happens after the site launches?",
-    a: "You get a live site, full access to your deployment, and direct support. A monthly retainer is available if you want ongoing updates, SEO monitoring, and priority access.",
-  },
-  {
-    q: "Who do you typically work with?",
-    a: "Primarily trades businesses across the GTA including plumbers, roofers, landscapers, excavators, HVAC contractors, and painters. My focus is local businesses that need to be found on Google.",
-  },
-  {
-    q: "Will my site actually rank on Google?",
-    a: "Every site includes full SEO setup from day one: schema markup, XML sitemap, on-page keyword optimization, Google Business Profile guidance, and proper meta tags. Rankings take time but you will have the right foundation built in from the start.",
-  },
-  {
-    q: "How much does a website cost?",
-    a: "Every project is scoped and quoted individually based on what you actually need. Get in touch for a free quote with no obligation.",
+    name: "Monthly Retainer",
+    from: "$299/mo",
+    desc: "Keep your site fast, fresh, and climbing Google after launch.",
+    features: ["Monthly updates", "SEO monitoring", "Priority support", "Performance reports", "New pages on request"],
+    highlight: false,
   },
 ];
 
@@ -229,27 +226,72 @@ export default function Services() {
           </ScrollReveal>
         </section>
 
-        {/* FAQ */}
+        {/* Pricing */}
         <section className="py-20 px-6" style={{ background: "#08080F" }}>
-          <div className="max-w-3xl mx-auto">
-            <p className="section-eyebrow mb-5">FAQ</p>
+          <div className="max-w-6xl mx-auto">
+            <p className="section-eyebrow mb-5">Pricing</p>
             <h2
-              className="text-foreground leading-none mb-12"
+              className="text-foreground leading-none mb-4"
               style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2.2rem,4vw,3rem)", letterSpacing: "0.02em" }}
             >
-              Common Questions.
+              Straightforward Pricing.<br />
+              <span className="text-muted-foreground">No Hidden Fees.</span>
             </h2>
-            <div className="flex flex-col gap-0">
-              {faqs.map((faq, i) => (
-                <div key={i}>
-                  <div className="py-6">
-                    <p className="font-semibold text-foreground mb-2">{faq.q}</p>
-                    <p className="text-base leading-relaxed text-white/85">{faq.a}</p>
-                  </div>
-                  {i < faqs.length - 1 && <Separator className="opacity-20" />}
-                </div>
+            <p className="text-base text-white/70 mb-12 max-w-[50ch]">
+              Every project gets a custom quote. These are starting points — your final price is scoped to exactly what you need, nothing more.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {pricing.map(({ name, from, desc, features, highlight }) => (
+                <Card
+                  key={name}
+                  className="rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+                  style={{
+                    background: highlight ? "linear-gradient(145deg,rgba(109,40,217,0.12),rgba(79,70,229,0.08))" : "#0F0F1C",
+                    border: highlight ? "1px solid rgba(109,40,217,0.4)" : "1px solid rgba(255,255,255,0.07)",
+                  }}
+                >
+                  <CardContent className="p-7 flex flex-col gap-5 h-full">
+                    {highlight && (
+                      <span className="text-[0.65rem] font-semibold tracking-widest uppercase text-violet-300 flex items-center gap-1.5">
+                        <Star size={10} weight="fill" /> Most Popular
+                      </span>
+                    )}
+                    <div>
+                      <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">{name}</p>
+                      <p
+                        className="text-violet-300 leading-none mb-2"
+                        style={{ fontFamily: "var(--font-bebas)", fontSize: "2.4rem", letterSpacing: "0.04em" }}
+                      >
+                        From {from}
+                      </p>
+                      <p className="text-sm text-white/70">{desc}</p>
+                    </div>
+                    <ul className="flex flex-col gap-2 flex-1">
+                      {features.map((f) => (
+                        <li key={f} className="flex items-center gap-2 text-sm text-white/80">
+                          <Check size={12} weight="bold" className="text-violet-500 shrink-0" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href="/contact"
+                      className={cn(
+                        buttonVariants({ variant: highlight ? "default" : "outline" }),
+                        highlight
+                          ? "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 h-9 px-4"
+                          : "bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-9 px-4"
+                      )}
+                    >
+                      Get a Quote
+                    </a>
+                  </CardContent>
+                </Card>
               ))}
             </div>
+            <p className="mt-6 text-xs text-muted-foreground text-center">
+              All prices in CAD. Final quote provided after a free discovery call — no obligation.
+            </p>
           </div>
         </section>
 
@@ -265,7 +307,7 @@ export default function Services() {
             >
               Ready to Start?
             </h2>
-            <p className="text-base text-foreground/65 max-w-[42ch]">
+            <p className="text-base text-white/80 max-w-[42ch]">
               Free 15-minute call. Clear quote. No surprises.
             </p>
             <a

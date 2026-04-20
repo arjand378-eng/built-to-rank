@@ -15,7 +15,7 @@ const skills = [
   { icon: <MapPin size={15} weight="duotone" />,  label: "GTA & Ontario"        },
 ];
 const stats = [
-  { value: "2",    label: "Sites Live"        },
+  { value: "1",    label: "Site Live"         },
   { value: "100%", label: "On-Time Delivery"  },
   { value: "GTA",  label: "Based & Available" },
 ];
