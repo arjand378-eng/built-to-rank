@@ -24,11 +24,25 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
+      const key = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+      if (!key) {
+        console.error("Missing NEXT_PUBLIC_WEB3FORMS_KEY env var");
+        setLoading(false);
+        return;
+      }
       const data = new FormData(e.currentTarget);
-      data.append("access_key", "181f2092-058f-40ab-8be4-a3786a0fdac9");
+      data.append("access_key", key);
       const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
       const json = await res.json();
-      if (json.success) setSubmitted(true);
+      if (json.success) {
+        setSubmitted(true);
+        // GA4 lead event — no-ops if gtag isn't loaded
+        if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+          (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", "generate_lead", {
+            form_location: "contact",
+          });
+        }
+      }
     } catch {
       // silently fail — user sees the form still
     }
@@ -64,7 +78,7 @@ export default function Contact() {
             <span className="text-muted-foreground">Something That Ranks.</span>
           </h2>
           <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
-            Free quote. No hard sell. Usually reply within a few hours.
+            Send us your current site (or your Google Business Profile link). You&apos;ll get a free written audit back showing where you&apos;re losing customers and exactly how to fix it. No sales pitch.
           </p>
         </motion.div>
 
@@ -96,27 +110,31 @@ export default function Contact() {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-xs font-medium text-muted-foreground">Your Name *</label>
-                        <input name="name" required placeholder="John Smith" value={form.name} onChange={handle} className={inputCls} />
+                        <label htmlFor="contact-name" className="text-xs font-medium text-muted-foreground">Your Name *</label>
+                        <input id="contact-name" name="name" required placeholder="John Smith" value={form.name} onChange={handle} className={inputCls} />
                       </div>
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-xs font-medium text-muted-foreground">Business Name</label>
-                        <input name="business" placeholder="Smith Plumbing Inc." value={form.business} onChange={handle} className={inputCls} />
+                        <label htmlFor="contact-business" className="text-xs font-medium text-muted-foreground">Business Name</label>
+                        <input id="contact-business" name="business" placeholder="Smith Plumbing Inc." value={form.business} onChange={handle} className={inputCls} />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-xs font-medium text-muted-foreground">Email *</label>
-                        <input name="email" type="email" required placeholder="john@smithplumbing.ca" value={form.email} onChange={handle} className={inputCls} />
+                        <label htmlFor="contact-email" className="text-xs font-medium text-muted-foreground">Email *</label>
+                        <input id="contact-email" name="email" type="email" required placeholder="john@smithplumbing.ca" value={form.email} onChange={handle} className={inputCls} />
                       </div>
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-xs font-medium text-muted-foreground">Phone</label>
-                        <input name="phone" type="tel" placeholder="+1 (905) 555-0192" value={form.phone} onChange={handle} className={inputCls} />
+                        <label htmlFor="contact-phone" className="text-xs font-medium text-muted-foreground">Phone</label>
+                        <input id="contact-phone" name="phone" type="tel" placeholder="+1 (905) 555-0192" value={form.phone} onChange={handle} className={inputCls} />
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-medium text-muted-foreground">What do you need?</label>
-                      <select name="service" className={inputCls + " cursor-pointer"}>
+                      <label htmlFor="contact-url" className="text-xs font-medium text-muted-foreground">Current website or Google Business Profile URL</label>
+                      <input id="contact-url" name="current_url" type="url" placeholder="https://yoursite.ca or google.com/maps/..." className={inputCls} />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor="contact-service" className="text-xs font-medium text-muted-foreground">What do you need?</label>
+                      <select id="contact-service" name="service" className={inputCls + " cursor-pointer"}>
                         <option value="">Select a service...</option>
                         <option>Website Design & Development</option>
                         <option>SEO Setup & Optimization</option>
@@ -125,11 +143,12 @@ export default function Contact() {
                       </select>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-medium text-muted-foreground">Tell me about your business</label>
+                      <label htmlFor="contact-message" className="text-xs font-medium text-muted-foreground">Tell me about your business</label>
                       <textarea
+                        id="contact-message"
                         name="message"
                         rows={4}
-                        placeholder="We're a roofing company in Brampton — no website yet, need to start getting found on Google..."
+                        placeholder="We're a roofing company in Brampton. No website yet, need to start getting found on Google..."
                         value={form.message}
                         onChange={handle}
                         className={inputCls + " resize-none"}
@@ -187,9 +206,9 @@ export default function Contact() {
               <CardContent className="p-6 flex flex-col gap-3">
                 <p className="font-semibold text-sm text-foreground">What happens next?</p>
                 {[
-                  "I review your message (usually within hours)",
-                  "Free 15-min call to understand your business",
-                  "You get a clear quote with no surprises",
+                  "I review your site / GBP (usually within hours)",
+                  "You get a free written audit, no sales pitch",
+                  "If it's a fit, we hop on a 15-min call",
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-2.5">
                     <div

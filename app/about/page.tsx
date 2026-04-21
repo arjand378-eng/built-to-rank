@@ -41,13 +41,13 @@ const process = [
     step: "04",
     title: "Launch",
     time: "Day 42–47",
-    desc: "Deployed, live, and tested on every device. You get a site that works — and support from there if you need it.",
+    desc: "Deployed, live, and tested on every device. You get a site that works, plus support from there if you need it.",
   },
 ];
 
 const guarantees = [
   "30–47 day delivery",
-  "100% custom — no templates",
+  "100% custom, no templates",
   "SEO included, not extra",
   "Free revisions until you're satisfied",
   "No long-term contracts",

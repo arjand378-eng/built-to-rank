@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X } from "@phosphor-icons/react";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -23,12 +23,30 @@ const primaryLink = cn(
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 32);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        menuBtnRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    menuBtnRef.current?.focus();
+  };
 
   return (
     <>
@@ -45,7 +63,10 @@ export default function Navbar() {
         {scrolled && <Separator className="absolute bottom-0 left-0 right-0 opacity-40" />}
 
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="flex items-center">
+          <a
+            href="/"
+            className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+          >
             <span
               className="text-2xl text-foreground"
               style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.04em" }}
@@ -64,25 +85,33 @@ export default function Navbar() {
             </span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
               >
                 {link.label}
               </a>
             ))}
-            <a href="/contact" className={primaryLink}>Get a Quote</a>
+            <a
+              href="/contact"
+              className={cn(primaryLink, "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent")}
+            >
+              Get a Free Audit
+            </a>
           </nav>
 
           <Button
+            ref={menuBtnRef}
             variant="ghost"
             size="icon"
-            className="md:hidden text-muted-foreground hover:text-foreground"
+            className="md:hidden text-muted-foreground hover:text-foreground focus-visible:ring-2 focus-visible:ring-violet-500"
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             {menuOpen ? <X size={20} weight="bold" /> : <List size={20} weight="bold" />}
           </Button>
@@ -92,7 +121,10 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-menu"
             key="mobile-menu"
+            role="dialog"
+            aria-label="Navigation menu"
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
@@ -112,8 +144,8 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="text-base font-medium py-2 text-white/80 hover:text-white transition-colors border-b border-border"
-                onClick={() => setMenuOpen(false)}
+                className="text-base font-medium py-2 text-white/80 hover:text-white transition-colors border-b border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+                onClick={closeMenu}
               >
                 {link.label}
               </motion.a>
@@ -121,9 +153,9 @@ export default function Navbar() {
             <a
               href="/contact"
               className={cn(primaryLink, "mt-1 w-full justify-center h-9")}
-              onClick={() => setMenuOpen(false)}
+              onClick={closeMenu}
             >
-              Get a Free Quote
+              Get a Free Audit
             </a>
           </motion.div>
         )}

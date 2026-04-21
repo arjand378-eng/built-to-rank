@@ -11,9 +11,9 @@ import { Separator } from "@/components/ui/separator";
 
 const tags = ["Custom Build", "Mobile-First", "SEO Setup", "Fast Load Times", "GTA"];
 const results = [
-  { value: "47",   label: "Days to Launch"  },
-  { value: "Pg.1", label: "Google Ranking"  },
-  { value: "100%", label: "Custom Built"    },
+  { value: "47",   label: "Days to Launch"     },
+  { value: "0",    label: "Templates Used"     },
+  { value: "100%", label: "Custom Next.js"     },
 ];
 
 export default function Portfolio() {
@@ -158,7 +158,7 @@ export default function Portfolio() {
                   </div>
 
                   <p className="text-sm leading-relaxed text-white/80">
-                    Full custom website built from scratch — cinematic video hero,
+                    Full custom website built from scratch. Cinematic video hero,
                     smooth scroll animations, and a contact form that emails the client
                     directly. Launched in under 47 days with full SEO setup from day one.
                   </p>
@@ -188,7 +188,7 @@ export default function Portfolio() {
                       "Smooth scroll animations",
                       "Cinematic video hero",
                       "Premium page animations",
-                      "Contact form — emails client directly",
+                      "Contact form that emails client directly",
                       "Full SEO setup from day one",
                       "Live and fast on mobile",
                     ].map((item) => (

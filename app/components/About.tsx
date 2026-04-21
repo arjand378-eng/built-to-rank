@@ -87,7 +87,7 @@ export default function About() {
               href="#contact"
               className={cn(buttonVariants(), "self-start bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-4 active:scale-[0.98]")}
             >
-              Work With Me <ArrowRight size={15} weight="bold" />
+              Get a Free Website Audit <ArrowRight size={15} weight="bold" />
             </a>
           </div>
           </ScrollReveal>

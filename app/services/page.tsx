@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const webFeatures = [
   "Mobile-first, looks great on any phone",
-  "Smooth animations — premium feel",
+  "Smooth animations, premium feel",
   "Contact form that emails you directly",
   "Live and fast in 30–47 days",
   "SEO-ready from day one",
@@ -133,8 +133,8 @@ export default function Services() {
                       <h2 className="text-2xl font-bold text-foreground mb-3">Website Design & Development</h2>
                       <p className="text-base leading-relaxed text-white/85">
                         A fully custom website built mobile-first and designed to convert
-                        visitors into booked jobs. Every detail — the layout, the copy, the
-                        animations — is built around your specific trade and your local market.
+                        visitors into booked jobs. Every detail, from the layout and copy to the
+                        animations, is built around your specific trade and your local market.
                       </p>
                     </div>
                     <a
@@ -239,7 +239,7 @@ export default function Services() {
               <span className="text-muted-foreground">No Hidden Fees.</span>
             </h2>
             <p className="text-base text-white/70 mb-12 max-w-[50ch]">
-              Every project gets a custom quote. These are starting points — your final price is scoped to exactly what you need, nothing more.
+              Every project gets a custom quote. These are starting points. Your final price is scoped to exactly what you need, nothing more.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {pricing.map(({ name, from, desc, features, highlight }) => (
@@ -291,7 +291,7 @@ export default function Services() {
               ))}
             </div>
             <p className="mt-6 text-xs text-muted-foreground text-center">
-              All prices in CAD. Final quote provided after a free discovery call — no obligation.
+              All prices in CAD. Final quote provided after a free discovery call. No obligation.
             </p>
           </div>
         </section>

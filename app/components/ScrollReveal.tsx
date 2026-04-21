@@ -1,10 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
   children: React.ReactNode;
@@ -26,28 +22,38 @@ export default function ScrollReveal({
     const el = ref.current;
     if (!el) return;
 
-    const from: gsap.TweenVars = { opacity: 0, duration: 0.8, ease: "power3.out", delay };
-    const to: gsap.TweenVars   = { opacity: 1, duration: 0.8, ease: "power3.out", delay };
+    let ctx: { revert: () => void } | null = null;
 
-    switch (animation) {
-      case "fadeUp":    from.y = 40;   to.y = 0;   break;
-      case "slideLeft": from.x = -50;  to.x = 0;   break;
-      case "slideRight":from.x = 50;   to.x = 0;   break;
-      case "scaleUp":   from.scale = 0.88; to.scale = 1; from.y = 24; to.y = 0; break;
-    }
+    // Dynamic import keeps GSAP out of the initial JS bundle
+    Promise.all([
+      import("gsap").then((m) => m.gsap),
+      import("gsap/ScrollTrigger").then((m) => m.ScrollTrigger),
+    ]).then(([gsap, ScrollTrigger]) => {
+      gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(el, from, {
-        ...to,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 88%",
-          once: true,
-        },
+      const from: gsap.TweenVars = { opacity: 0, duration: 0.8, ease: "power3.out", delay };
+      const to: gsap.TweenVars   = { opacity: 1, duration: 0.8, ease: "power3.out", delay };
+
+      switch (animation) {
+        case "fadeUp":    from.y = 40;       to.y = 0;   break;
+        case "slideLeft": from.x = -50;      to.x = 0;   break;
+        case "slideRight":from.x = 50;       to.x = 0;   break;
+        case "scaleUp":   from.scale = 0.88; to.scale = 1; from.y = 24; to.y = 0; break;
+      }
+
+      ctx = gsap.context(() => {
+        gsap.fromTo(el, from, {
+          ...to,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 88%",
+            once: true,
+          },
+        });
       });
     });
 
-    return () => ctx.revert();
+    return () => ctx?.revert();
   }, [animation, delay]);
 
   return (

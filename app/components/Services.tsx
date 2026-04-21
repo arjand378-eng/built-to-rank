@@ -100,7 +100,7 @@ export default function Services() {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
                     "Mobile-first, looks great on any phone",
-                    "Smooth animations — premium feel",
+                    "Smooth animations, premium feel",
                     "Contact form that emails you directly",
                     "Live and fast in 30–47 days",
                     "SEO-ready from day one",
@@ -117,7 +117,7 @@ export default function Services() {
                   href="#contact"
                   className={cn(buttonVariants(), "self-start mt-auto bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-4 active:scale-[0.98]")}
                 >
-                  Start a Project <ArrowCircleRight size={16} weight="bold" />
+                  Get a Free Website Audit <ArrowCircleRight size={16} weight="bold" />
                 </a>
               </CardContent>
             </Card>

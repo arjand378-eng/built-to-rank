@@ -21,7 +21,7 @@ const steps = [
     number: "03",
     icon: <MagnifyingGlass size={28} weight="duotone" />,
     title: "You Start Ranking",
-    body: "Full SEO setup from day one — your site is built to show up when people search for your trade in your city.",
+    body: "Full SEO setup from day one. Your site is built to show up when people search for your trade in your city.",
   },
 ];
 

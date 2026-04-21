@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(sips -s format webp \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/public/peel-excavation-preview.png\" --out \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/public/peel-excavation-preview.webp\")",
-      "Bash(xargs sed *)"
+      "Bash(xargs sed *)",
+      "Bash(sips -s format jpeg -s formatOptions 78 og-image.jpg --out og-image-new.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight og-image.jpg)",
+      "Bash(sips -z 630 1200 --resampleHeightWidthMax 1200 -s format jpeg -s formatOptions 82 og-image.jpg --out og-image-new.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight og-image-new.jpg)",
+      "Bash(brew install *)",
+      "Bash(npx tsc *)"
     ]
   }
 }

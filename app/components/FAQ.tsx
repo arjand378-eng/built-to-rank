@@ -8,15 +8,15 @@ import { Separator } from "@/components/ui/separator";
 const faqs = [
   {
     q: "How much does a website cost?",
-    a: "Most trades websites start at $500–$800. The final price depends on how many pages you need and what features matter to your business — a plumber with 3 services is different from a general contractor with 10. You'll get a clear quote before anything starts. No surprises, no hidden fees.",
+    a: "Most trades websites start at $500–$800. The final price depends on how many pages you need and what features matter to your business. A plumber with 3 services is different from a general contractor with 10. You'll get a clear quote before anything starts. No surprises, no hidden fees.",
   },
   {
     q: "How long does it take?",
-    a: "Typically 30–47 days from the first call to your site going live. You'll see the design before anything is finalized, and I don't launch until you're happy with it. If you need it faster, let me know — I can work around urgent timelines.",
+    a: "Typically 30–47 days from the first call to your site going live. You'll see the design before anything is finalized, and I don't launch until you're happy with it. If you need it faster, let me know. I can work around urgent timelines.",
   },
   {
     q: "Do I need to be involved every day?",
-    a: "Not at all. I need about 30 minutes of your time at the start to understand your business and what you want. Then you review the design near the end. I handle everything in between — design, build, SEO setup, and launch.",
+    a: "Not at all. I need about 30 minutes of your time at the start to understand your business and what you want. Then you review the design near the end. I handle everything in between: design, build, SEO setup, and launch.",
   },
   {
     q: "What if I don't like the design?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "Will this actually get me more calls?",
-    a: "The honest answer: a website alone doesn't guarantee calls overnight. What it does is make sure that when someone in Brampton or Mississauga searches for your trade, your business shows up instead of your competitor's. SEO builds momentum over 3–6 months — but once it kicks in, it keeps working for you without paying for ads.",
+    a: "The honest answer: a website alone doesn't guarantee calls overnight. What it does is make sure that when someone in Brampton or Mississauga searches for your trade, your business shows up instead of your competitor's. SEO builds momentum over 3–6 months, but once it kicks in, it keeps working for you without paying for ads.",
   },
   {
     q: "What do I need to get started?",

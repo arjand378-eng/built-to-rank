@@ -94,7 +94,7 @@ export default function Hero() {
             variant="outline"
             className="border-violet-700/40 bg-violet-900/20 text-violet-300 text-[0.68rem] tracking-[0.14em] uppercase px-3 py-1 rounded-full"
           >
-            Web Design + SEO &middot; GTA &amp; Ontario
+            Local SEO + Web Design &middot; Peel Region &amp; GTA
           </Badge>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function Hero() {
             letterSpacing: "0.02em",
           }}
         >
-          Websites That{" "}
+          We Get Trades Businesses{" "}
           <span
             style={{
               background: "linear-gradient(135deg,#A78BFA 0%,#818CF8 100%)",
@@ -116,9 +116,9 @@ export default function Hero() {
               backgroundClip: "text",
             }}
           >
-            Rank.
+            Found on Google.
           </span>
-          <br />Clients That Call.
+          <br />So Your Phone Rings.
         </motion.h1>
 
         <motion.p
@@ -126,8 +126,8 @@ export default function Hero() {
           className="text-base md:text-lg leading-relaxed max-w-[50ch] text-white/80"
           style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9)" }}
         >
-          We build custom, fast websites for plumbers, roofers, landscapers, and
-          contractors across the GTA. Then we rank them on Google so the phone rings.
+          Custom-built websites + local SEO for plumbers, roofers, landscapers,
+          HVAC, and excavators across the GTA. Built to rank in 47 days.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mt-1">
@@ -138,7 +138,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            Get a Free Quote <ArrowRight size={16} weight="bold" />
+            Get a Free Website Audit <ArrowRight size={16} weight="bold" />
           </motion.a>
           <motion.a
             href="#work"
@@ -166,6 +166,7 @@ export default function Hero() {
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
           <span className="text-xs font-semibold text-white/75">GTA-Based</span>
         </motion.div>
+
       </motion.div>
 
       {/* Scroll indicator */}
