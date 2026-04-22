@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 const links = [
+  { label: "Home",     href: "/"         },
   { label: "Services", href: "/services" },
   { label: "Work",     href: "/#work"    },
   { label: "About",    href: "/about"    },

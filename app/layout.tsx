@@ -42,12 +42,17 @@ export const metadata: Metadata = {
   },
 };
 
+// sameAs: add your GBP share URL here once builttorank.ca is live in the profile
+// Go to business.google.com → Share → Copy link → paste below
+const gbpUrl = "";
+
 const schema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
   "name": "Built to Rank",
-  "description": "Custom web design and SEO for trades businesses across the GTA, Ontario.",
+  "description": "Custom web design and local SEO for trades businesses across the GTA, Ontario. Plumbers, roofers, HVAC, landscapers, and contractors.",
   "url": siteUrl,
+  "image": `${siteUrl}/og-image.jpg`,
   "telephone": "+16476578525",
   "email": "builttorank@hotmail.com",
   "founder": { "@type": "Person", "name": "Arjan Dhillon" },
@@ -61,7 +66,18 @@ const schema = {
     "Brampton", "Mississauga", "Caledon", "Bolton",
     "Vaughan", "Peel Region", "Greater Toronto Area",
   ],
-  "serviceType": ["Web Design", "Web Development", "Local SEO", "SEO Optimization"],
+  "serviceType": [
+    "Web Design", "Web Development",
+    "Local SEO", "SEO Optimization",
+    "Google Business Profile Optimization",
+  ],
+  "knowsAbout": [
+    "Local SEO for trades businesses",
+    "Web design for contractors",
+    "Google Business Profile optimization",
+    "Next.js web development",
+  ],
+  ...(gbpUrl ? { "sameAs": [gbpUrl] } : {}),
   "priceRange": "$$",
 };
 
