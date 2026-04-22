@@ -45,7 +45,7 @@ export default function Portfolio() {
             Built to Rank.<br />
             <span className="text-muted-foreground">Proven in the Field.</span>
           </h2>
-          <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
+          <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl tracking-wide">
             One project. Zero templates. Every detail built from scratch.
           </p>
         </motion.div>

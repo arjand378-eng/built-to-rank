@@ -204,7 +204,7 @@ export default function PeelExcavationCaseStudy() {
                 />
               </picture>
             </div>
-            <p className="text-xs text-center text-white/40 mb-16">
+            <p className="text-xs text-center text-white/60 mb-16">
               peelexcavationservices.netlify.app — live and running
             </p>
 
@@ -214,11 +214,11 @@ export default function PeelExcavationCaseStudy() {
                 <p className="section-eyebrow mb-4">The Challenge</p>
                 <h2
                   className="text-foreground leading-tight mb-5"
-                  style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2rem,4vw,3rem)", letterSpacing: "0.02em" }}
+                  style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2.4rem,5vw,4rem)", letterSpacing: "0.02em" }}
                 >
                   Starting from Zero.
                 </h2>
-                <div className="flex flex-col gap-4 text-sm leading-relaxed text-white/85">
+                <div className="flex flex-col gap-4 text-sm leading-relaxed text-white">
                   <p>
                     Peel Excavation Services is a contractor serving Brampton and the
                     surrounding Peel Region. When I started this build, they had no website,
@@ -240,11 +240,11 @@ export default function PeelExcavationCaseStudy() {
                 <p className="section-eyebrow mb-4">The Approach</p>
                 <h2
                   className="text-foreground leading-tight mb-5"
-                  style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2rem,4vw,3rem)", letterSpacing: "0.02em" }}
+                  style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2.4rem,5vw,4rem)", letterSpacing: "0.02em" }}
                 >
                   Built to Rank.
                 </h2>
-                <div className="flex flex-col gap-4 text-sm leading-relaxed text-white/85">
+                <div className="flex flex-col gap-4 text-sm leading-relaxed text-white">
                   <p>
                     I chose Next.js with static export for speed and SEO control. Every page
                     was built mobile-first, with structured data and on-page keywords baked in
@@ -320,7 +320,7 @@ export default function PeelExcavationCaseStudy() {
                     </div>
                     <div className="pt-1">
                       <p className="text-sm font-semibold text-white mb-0.5">{phase}</p>
-                      <p className="text-sm text-white/70">{detail}</p>
+                      <p className="text-sm text-white/85">{detail}</p>
                     </div>
                   </div>
                 ))}

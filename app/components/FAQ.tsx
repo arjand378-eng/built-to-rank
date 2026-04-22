@@ -78,7 +78,7 @@ export default function FAQ() {
             Questions Trades<br />
             <span className="text-muted-foreground">Owners Always Ask.</span>
           </h2>
-          <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
+          <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl tracking-wide">
             Straight answers. No fluff.
           </p>
         </motion.div>
@@ -122,7 +122,7 @@ export default function FAQ() {
                     transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                     style={{ overflow: "hidden" }}
                   >
-                    <p className="px-7 pb-6 text-sm leading-relaxed text-white/75">{a}</p>
+                    <p className="px-7 pb-6 text-sm leading-relaxed text-white/90">{a}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

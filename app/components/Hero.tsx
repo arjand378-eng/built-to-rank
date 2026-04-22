@@ -160,11 +160,11 @@ export default function Hero() {
             border: "1px solid rgba(255,255,255,0.08)",
           }}
         >
-          <span className="text-xs font-semibold text-white/75">1 Site Delivered</span>
+          <span className="text-xs font-semibold text-white/90">1 Site Delivered</span>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <span className="text-xs font-semibold text-white/75">47 Days to Launch</span>
+          <span className="text-xs font-semibold text-white/90">47 Days to Launch</span>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <span className="text-xs font-semibold text-white/75">GTA-Based</span>
+          <span className="text-xs font-semibold text-white/90">GTA-Based</span>
         </motion.div>
 
       </motion.div>

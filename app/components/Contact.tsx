@@ -77,7 +77,7 @@ export default function Contact() {
             Let&apos;s Build<br />
             <span className="text-muted-foreground">Something That Ranks.</span>
           </h2>
-          <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
+          <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl tracking-wide">
             Send us your current site (or your Google Business Profile link). You&apos;ll get a free written audit back showing where you&apos;re losing customers and exactly how to fix it. No sales pitch.
           </p>
         </motion.div>
