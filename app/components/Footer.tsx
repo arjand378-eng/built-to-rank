@@ -47,7 +47,7 @@ export default function Footer() {
             href="/contact"
             className={cn(buttonVariants(), "shrink-0 bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-10 px-5 active:scale-[0.98]")}
           >
-            Get a Free Quote <ArrowUpRight size={15} weight="bold" />
+            Get a Free Website Audit <ArrowUpRight size={15} weight="bold" />
           </a>
         </div>
       </div>

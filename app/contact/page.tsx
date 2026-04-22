@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact | Built to Rank — Free Quote, GTA Web Design & SEO",
-  description: "Get a free quote from Built to Rank. Web design and SEO for trades businesses across the GTA. Usually reply within a few hours.",
+  title: "Contact | Built to Rank — Free Website Audit, GTA Web Design & SEO",
+  description: "Get a free website audit from Built to Rank. Web design and SEO for trades businesses across the GTA. Usually reply within a few hours.",
   alternates: { canonical: "https://builttorank.ca/contact" },
 };
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
               <span className="text-muted-foreground">Something That Ranks.</span>
             </h1>
             <p className="mt-6 text-lg text-white/80 max-w-[44ch]">
-              Free quote. No hard sell. Usually reply within a few hours.
+              Free written audit. No hard sell. Usually reply within a few hours.
             </p>
           </div>
         </section>

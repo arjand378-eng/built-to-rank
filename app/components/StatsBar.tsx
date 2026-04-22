@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const stats = [
   { value: "1",    label: "Site Launched",        sub: "and counting"         },
   { value: "47",   label: "Days to Go Live",       sub: "start to launch"      },
-  { value: "Pg.1", label: "Google Ranking",        sub: "for our first client" },
+  { value: "0",    label: "Templates Used",         sub: "100% custom code"    },
   { value: "100%", label: "Custom Built",          sub: "zero templates"       },
 ];
 
@@ -50,7 +50,7 @@ export default function StatsBar() {
             <span className="relative text-sm font-bold text-white/90 tracking-wide uppercase mb-1">
               {label}
             </span>
-            <span className="relative text-xs text-white/35 tracking-wide">
+            <span className="relative text-xs text-white/55 tracking-wide">
               {sub}
             </span>
           </motion.div>
