@@ -157,10 +157,10 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  <p className="text-sm leading-relaxed text-white/80">
-                    Full custom website built from scratch. Cinematic video hero,
-                    smooth scroll animations, and a contact form that emails the client
-                    directly. Launched in under 47 days with full SEO setup from day one.
+                  <p className="text-sm leading-relaxed text-white/90">
+                    Full custom website for a new excavation contractor in Brampton with
+                    zero online presence. Built from scratch, SEO-ready from day one,
+                    and live in under 47 days. No templates. No shortcuts.
                   </p>
 
                   {/* Stats */}
@@ -185,12 +185,12 @@ export default function Portfolio() {
                   {/* Checklist */}
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                     {[
-                      "Smooth scroll animations",
-                      "Cinematic video hero",
-                      "Premium page animations",
-                      "Contact form that emails client directly",
-                      "Full SEO setup from day one",
-                      "Live and fast on mobile",
+                      "Fast-loading on any phone",
+                      "Video hero with scroll animations",
+                      "Contact form emailing client directly",
+                      "Google Business Profile guidance",
+                      "Schema, sitemap, on-page SEO",
+                      "Live in 47 days, zero templates",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Check size={12} weight="bold" className="text-violet-600 shrink-0" />
@@ -212,14 +212,22 @@ export default function Portfolio() {
                     ))}
                   </div>
 
-                  <a
-                    href="https://peelexcavationservices.netlify.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(buttonVariants(), "self-start bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-4 active:scale-[0.98]")}
-                  >
-                    View Live Site <ArrowUpRight size={15} weight="bold" />
-                  </a>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="https://peelexcavationservices.netlify.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(buttonVariants(), "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-4 active:scale-[0.98]")}
+                    >
+                      View Live Site <ArrowUpRight size={15} weight="bold" />
+                    </a>
+                    <a
+                      href="/proof/peel-excavation"
+                      className={cn(buttonVariants({ variant: "outline" }), "bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 gap-2 h-9 px-4 active:scale-[0.98]")}
+                    >
+                      Full Case Study <ArrowUpRight size={15} weight="bold" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </CardContent>

@@ -48,7 +48,7 @@ export default function Testimonials() {
             "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(109,40,217,0.07) 0%, transparent 70%)",
         }}
       />
-      <Separator className="max-w-6xl mx-auto mb-28 opacity-30" />
+      <Separator className="max-w-6xl mx-auto mb-16 opacity-30" />
 
       <div className="relative max-w-4xl mx-auto">
         <motion.div
@@ -70,7 +70,7 @@ export default function Testimonials() {
             Built. Shipped.<br />
             <span className="text-muted-foreground">On Google.</span>
           </h2>
-          <p className="text-lg font-light leading-relaxed text-white/75 max-w-2xl mx-auto tracking-wide">
+          <p className="text-lg font-light leading-relaxed text-white/90 max-w-2xl mx-auto tracking-wide">
             One live project in the GTA trades space. Full Next.js build, SEO-ready from
             day one, deployed and running. The work speaks for itself.
           </p>
@@ -94,7 +94,7 @@ export default function Testimonials() {
               <Icon size={22} weight="duotone" className="text-violet-300" />
               <div>
                 <p className="text-sm font-semibold text-white mb-1">{label}</p>
-                <p className="text-sm text-white/65 leading-relaxed">{note}</p>
+                <p className="text-sm text-white/85 leading-relaxed">{note}</p>
               </div>
             </motion.div>
           ))}

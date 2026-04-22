@@ -8,20 +8,20 @@ const steps = [
   {
     number: "01",
     icon: <ChatCircle size={28} weight="duotone" />,
-    title: "Free Discovery Call",
-    body: "We talk about your business, your goals, and what you want from a website. No jargon, no pressure. Usually 15 minutes.",
+    title: "Tell Me Your Trade",
+    body: "We talk about your business, your city, and who you want to beat on Google. No jargon, no pressure. Usually 15 minutes.",
   },
   {
     number: "02",
     icon: <PaintBrush size={28} weight="duotone" />,
-    title: "We Build It",
-    body: "Custom design, built from scratch. You see it before it goes live and we make changes until you're happy. Typically 30–45 days.",
+    title: "I Build Your Site",
+    body: "Built from scratch around your trade. You see it before it goes live and I make changes until you're happy. Most sites are live within 47 days.",
   },
   {
     number: "03",
     icon: <MagnifyingGlass size={28} weight="duotone" />,
-    title: "You Start Ranking",
-    body: "Full SEO setup from day one. Your site is built to show up when people search for your trade in your city.",
+    title: "Your Phone Starts Ringing",
+    body: "Full SEO setup built in from day one. When someone Googles your trade in your city, you show up. That's the whole point.",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function HowItWorks() {
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 70% 50% at 50% 60%, rgba(109,40,217,0.07) 0%, transparent 70%)" }}
       />
-      <Separator className="max-w-6xl mx-auto mb-28 opacity-30" />
+      <Separator className="max-w-6xl mx-auto mb-16 opacity-30" />
 
       <div className="relative max-w-6xl mx-auto">
         <motion.div
@@ -55,7 +55,7 @@ export default function HowItWorks() {
             Simple as<br />
             <span className="text-muted-foreground">1, 2, 3.</span>
           </h2>
-          <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
+          <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl tracking-wide">
             No confusing packages. No surprises. Just a clear path from where you are to a website that brings in work.
           </p>
         </motion.div>
@@ -98,7 +98,7 @@ export default function HowItWorks() {
 
               <div className="flex flex-col gap-2">
                 <h3 className="text-lg font-bold text-foreground">{title}</h3>
-                <p className="text-sm leading-relaxed text-white/70">{body}</p>
+                <p className="text-sm leading-relaxed text-white/85">{body}</p>
               </div>
             </motion.div>
           ))}

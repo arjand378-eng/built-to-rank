@@ -126,8 +126,8 @@ export default function Hero() {
           className="text-base md:text-lg leading-relaxed max-w-[50ch] text-white/80"
           style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9)" }}
         >
-          Custom-built websites + local SEO for plumbers, roofers, landscapers,
-          HVAC, and excavators across the GTA. Built to rank in 47 days.
+          You run the jobs. I build the website that makes your phone ring.
+          Custom sites + local SEO for trades businesses across the GTA.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mt-1">

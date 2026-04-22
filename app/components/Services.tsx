@@ -54,9 +54,9 @@ export default function Services() {
           >
             Everything a Trades<br />Business Needs Online.
           </h2>
-          <p className="text-xl font-light leading-relaxed text-white/75 max-w-2xl tracking-wide">
-            Custom websites. Local SEO. Ongoing support. A complete digital
-            presence for trades businesses across the GTA.
+          <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl tracking-wide">
+            Custom websites. Local SEO. Ongoing support. Everything a trades
+            business needs to get found and get calls.
           </p>
         </motion.div>
 
@@ -91,16 +91,16 @@ export default function Services() {
 
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-foreground">Website Design & Development</h3>
-                  <p className="text-sm leading-relaxed text-white/80">
-                    Custom Next.js sites built mobile-first. Fast, animated,
-                    production-quality. Designed to turn visitors into booked jobs.
+                  <p className="text-sm leading-relaxed text-white/90">
+                    A fast, mobile-first website built around your trade. Shows up
+                    on Google, looks sharp on any phone, and turns visitors into calls.
                   </p>
                 </div>
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
                     "Mobile-first, looks great on any phone",
-                    "Smooth animations, premium feel",
+                    "Looks sharp on any phone or laptop",
                     "Contact form that emails you directly",
                     "Live and fast in 30–47 days",
                     "SEO-ready from day one",
@@ -151,9 +151,9 @@ export default function Services() {
                 <ul className="flex flex-col gap-2">
                   {[
                     "Google Business Profile guidance",
-                    "Schema markup & sitemap",
-                    "On-page keyword optimization",
-                    "robots.txt & meta tags",
+                    "Structured data so Google understands your business",
+                    "On-page keywords for your trade + city",
+                    "Clean indexing so every page gets found",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-white/80">
                       <Check size={14} weight="bold" className="text-violet-600 shrink-0" />
