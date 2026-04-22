@@ -9,7 +9,8 @@
       "Bash(sips -g pixelWidth -g pixelHeight og-image-new.jpg)",
       "Bash(brew install *)",
       "Bash(npx tsc *)",
-      "Bash(grep -n \"price\\\\|pricing\\\\|500\\\\|800\\\\|299\\\\|\\\\$\" \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/app/services/page.tsx\" -i)"
+      "Bash(grep -n \"price\\\\|pricing\\\\|500\\\\|800\\\\|299\\\\|\\\\$\" \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/app/services/page.tsx\" -i)",
+      "Bash(grep -E \"\\\\.\\(jpg|png|gif|svg|avif|mp4\\)$\")"
     ]
   }
 }

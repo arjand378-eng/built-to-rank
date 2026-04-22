@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import HashScroll from "./components/HashScroll";
 import StatsBar from "./components/StatsBar";
 import Statement from "./components/Statement";
 import Services from "./components/Services";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <HashScroll />
       <main>
         <Hero />
         <StatsBar />
