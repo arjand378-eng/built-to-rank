@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 // sameAs: add your GBP share URL here once builttorank.ca is live in the profile
 // Go to business.google.com → Share → Copy link → paste below
-const gbpUrl = "";
+const gbpUrl = "https://share.google/gc3SvARSXMq9mtw2o";
 
 const schema = {
   "@context": "https://schema.org",
