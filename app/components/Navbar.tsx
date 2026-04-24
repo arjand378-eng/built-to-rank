@@ -14,6 +14,7 @@ const links = [
   { label: "Work",     href: "/#work"    },
   { label: "About",    href: "/about"    },
   { label: "Blog",     href: "/blog"     },
+  { label: "Codex",    href: "/codex"    },
   { label: "Contact",  href: "/contact"  },
 ];
 
@@ -71,7 +72,7 @@ export default function Navbar() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Built to Rank logo"
               width={36}
               height={36}

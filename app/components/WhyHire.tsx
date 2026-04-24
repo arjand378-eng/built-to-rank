@@ -98,7 +98,7 @@ export default function WhyHire() {
             }}
           >
             <motion.span variants={softRise} className="block">
-              Built to Turn Searches
+              Built to Turn Searches{" "}
             </motion.span>
             <motion.span variants={softRise} className="block text-muted-foreground">
               Into Calls.
@@ -135,6 +135,7 @@ export default function WhyHire() {
           >
             Request Free Audit <ArrowRight size={15} weight="bold" />
           </motion.a>
+
         </motion.div>
 
         <motion.div

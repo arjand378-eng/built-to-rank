@@ -85,6 +85,21 @@ export default function Services() {
                   </p>
                 </div>
 
+                <div className="overflow-hidden rounded-xl" style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
+                  <picture>
+                    <source srcSet="/mobile-website-preview.webp" type="image/webp" />
+                    <img
+                      src="/mobile-website-preview.webp"
+                      alt="Mobile-first contractor website displayed on three smartphones"
+                      width={800}
+                      height={450}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full object-cover"
+                    />
+                  </picture>
+                </div>
+
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
                     "Mobile-first, looks great on any phone",

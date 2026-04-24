@@ -1,5 +1,5 @@
 ---
-title: "How to Get Your Trades Business to Show Up on Google Maps in Brampton"
+title: "How to Show Up on Google Maps in Brampton"
 date: "April 23, 2026"
 readTime: "8 min read"
 category: "Local SEO"
@@ -156,4 +156,6 @@ None of this is complicated. None of it requires a big budget. But most trades b
 
 If you want help getting this set up properly, [Built to Rank builds websites for trades businesses in Brampton and Peel Region](/contact) with local SEO included from day one.
 
-[INTERNAL-LINK: see what a full trades website build includes → Built to Rank services page]
+**Further reading:**
+- [Local SEO for Contractors: How to Build a Stronger Google Presence](/blog/local-seo-contractors-brampton)
+- [5 Things Your Trades Business Website Must Have](/blog/what-trades-website-must-have-2026)

@@ -68,7 +68,21 @@ const schema = {
     "addressLocality": "Brampton",
     "addressRegion": "ON",
     "addressCountry": "CA",
+    "postalCode": "L6X 0R3",
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.7315,
+    "longitude": -79.7624,
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00",
+    },
+  ],
   "areaServed": [
     "Brampton", "Mississauga", "Caledon", "Bolton",
     "Vaughan", "Peel Region", "Greater Toronto Area",
@@ -88,6 +102,22 @@ const schema = {
   "priceRange": "$$",
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Built to Rank",
+  "url": siteUrl,
+  "description": "Web design and local SEO for trades businesses in the GTA.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/?s={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -95,13 +125,17 @@ export default function RootLayout({
 
   return (
     <html
-      lang="en"
+      lang="en-CA"
       className={`${inter.variable} ${plusJakartaSans.variable} ${bebasNeue.variable}`}
     >
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>

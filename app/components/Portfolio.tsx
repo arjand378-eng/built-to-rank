@@ -108,7 +108,7 @@ export default function Portfolio() {
                       </div>
                       <div style={{ background: "#080810" }}>
                         <picture>
-                          <source srcSet="/peel-excavation-preview.avif" type="image/avif" />
+                          <source srcSet="/peel-excavation-preview.webp" type="image/webp" />
                           <source srcSet="/peel-excavation-preview.jpg" type="image/jpeg" />
                           <img
                             src="/peel-excavation-preview.jpg"

@@ -44,3 +44,7 @@ The good news is that the bar is still relatively low in many trades industries.
 Every month you operate without a proper website is a month where serious customers may have a harder time finding, checking, and contacting your business. A professional website is not magic, but it gives your business a stronger place to send referrals, support Google visibility, and turn interest into real conversations.
 
 If you are a trades business and you are ready to start getting found online, get in touch for a free audit. No pressure, no hard sell. Just a real conversation about your business.
+
+**Further reading:**
+- [5 Things Your Trades Business Website Must Have](/blog/what-trades-website-must-have-2026)
+- [Local SEO for Contractors: How to Build a Stronger Google Presence](/blog/local-seo-contractors-brampton)

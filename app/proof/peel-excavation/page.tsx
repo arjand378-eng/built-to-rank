@@ -228,7 +228,7 @@ export default function PeelExcavationCaseStudy() {
                 </div>
               </div>
               <picture>
-                <source srcSet="/peel-excavation-preview.avif" type="image/avif" />
+                <source srcSet="/peel-excavation-preview.webp" type="image/webp" />
                 <source srcSet="/peel-excavation-preview.jpg" type="image/jpeg" />
                 <img
                   src="/peel-excavation-preview.jpg"

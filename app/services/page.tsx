@@ -68,8 +68,18 @@ const pricing = [
 ];
 
 export default function Services() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://builttorank.ca" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://builttorank.ca/services" },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <main id="main-content">
         {/* Hero */}

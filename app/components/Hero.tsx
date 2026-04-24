@@ -39,7 +39,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/hero-poster.jpg"
+        poster="/hero-poster.webp"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         style={{ opacity: 0.55 }}

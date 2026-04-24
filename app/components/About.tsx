@@ -94,6 +94,22 @@ export default function About() {
           {/* Right: cards */}
           <ScrollReveal animation="slideRight" delay={0.12}>
           <div className="flex flex-col gap-5">
+            {/* Workspace image */}
+            <div className="overflow-hidden rounded-2xl" style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
+              <picture>
+                <source srcSet="/builder-workspace.webp" type="image/webp" />
+                <img
+                  src="/builder-workspace.webp"
+                  alt="Developer workspace with MacBook Pro and mechanical keyboard — custom website development"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full object-cover"
+                />
+              </picture>
+            </div>
+
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-3">
               {stats.map(({ value, label }) => (
