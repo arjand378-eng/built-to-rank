@@ -101,6 +101,12 @@ const schema = {
   ],
   ...(gbpUrl ? { "sameAs": [gbpUrl] } : {}),
   "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1",
+    "bestRating": "5",
+  },
 };
 
 const websiteSchema = {
