@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, EnvelopeSimple, PaperPlaneTilt, Phone } from "@phosphor-icons/react";
+import { Check, EnvelopeSimple, FacebookLogo, InstagramLogo, PaperPlaneTilt, Phone } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
 import { Card, CardContent } from "@/components/ui/card";
@@ -247,6 +247,28 @@ export default function Contact() {
                     </div>
                   </div>
                 ))}
+                <div className="flex items-center gap-3 pt-1">
+                  <a
+                    href="https://www.facebook.com/people/Built-to-Rank/61588887140478/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Built to Rank on Facebook"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-violet-300 hover:text-violet-200 transition-colors"
+                    style={{ background: "rgba(109,40,217,0.12)", border: "1px solid var(--border-accent)" }}
+                  >
+                    <FacebookLogo size={17} weight="duotone" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/builttorank.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Built to Rank on Instagram"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-violet-300 hover:text-violet-200 transition-colors"
+                    style={{ background: "rgba(109,40,217,0.12)", border: "1px solid var(--border-accent)" }}
+                  >
+                    <InstagramLogo size={17} weight="duotone" />
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
