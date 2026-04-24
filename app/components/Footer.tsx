@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, FacebookLogo, InstagramLogo } from "@phosphor-icons/react/dist/ssr";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
@@ -108,6 +108,26 @@ export default function Footer() {
               Brampton, ON<br />
               Serving Peel Region &amp; GTA
             </address>
+            <div className="flex items-center gap-3 mt-1">
+              <a
+                href="https://www.facebook.com/people/Built-to-Rank/61588887140478/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Built to Rank on Facebook"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <FacebookLogo size={18} weight="duotone" />
+              </a>
+              <a
+                href="https://www.instagram.com/builttorank.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Built to Rank on Instagram"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <InstagramLogo size={18} weight="duotone" />
+              </a>
+            </div>
           </div>
         </div>
 

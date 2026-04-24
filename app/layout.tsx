@@ -99,7 +99,11 @@ const schema = {
     "Google Business Profile optimization",
     "Next.js web development",
   ],
-  ...(gbpUrl ? { "sameAs": [gbpUrl] } : {}),
+  "sameAs": [
+    ...(gbpUrl ? [gbpUrl] : []),
+    "https://www.facebook.com/people/Built-to-Rank/61588887140478/",
+    "https://www.instagram.com/builttorank.ca/",
+  ],
   "priceRange": "$$",
   "aggregateRating": {
     "@type": "AggregateRating",
