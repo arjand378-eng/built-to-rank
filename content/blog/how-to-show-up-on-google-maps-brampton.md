@@ -74,7 +74,7 @@ Your website needs to clearly state:
 
 NAP consistency is critical. If your website says "ABC Plumbing Inc." and your Google Business Profile says "ABC Plumbing," those are different in Google's eyes. Keep your business name, address, and phone number exactly the same across every online property.
 
-[INTERNAL-LINK: what your trades website needs to support local SEO → article on the 5 trades website must-haves]
+If you want your website to support your local SEO, make sure it has the right foundations in place. See [5 Things Your Trades Website Must Have](/blog/what-trades-website-must-have-2026) for a checklist of what actually matters.
 
 ## Step 4: Add Photos to Your Google Business Profile
 
@@ -110,7 +110,7 @@ The rule that applies everywhere: your business name, address, and phone number 
 
 Most local trades businesses in Brampton have between 3 and 8 online citations. Getting to 20 or more consistent, accurate citations puts you ahead of competitors who have not touched this.
 
-[INTERNAL-LINK: full local SEO guide for contractors in Brampton → local SEO guide for contractors]
+For a deeper look at building your search presence, read [Local SEO for Contractors in Brampton](/blog/local-seo-contractors-brampton) — it covers the broader strategy beyond your GBP listing.
 
 ## How Long Does It Take to Show Up on Google Maps in Brampton?
 

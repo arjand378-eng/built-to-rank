@@ -77,6 +77,7 @@ export default function Navbar() {
               width={36}
               height={36}
               className="rounded-lg"
+              fetchPriority="high"
             />
             <span
               className="hidden sm:inline text-2xl text-foreground"

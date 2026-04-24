@@ -104,6 +104,10 @@ export default function Footer() {
             <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">Contact</p>
             <a href="mailto:info@builttorank.ca" className="text-sm text-muted-foreground hover:text-foreground transition-colors">info@builttorank.ca</a>
             <a href="tel:+16476578525" className="text-sm text-muted-foreground hover:text-foreground transition-colors">647-657-8525</a>
+            <address className="not-italic text-sm text-muted-foreground leading-snug">
+              Brampton, ON<br />
+              Serving Peel Region &amp; GTA
+            </address>
           </div>
         </div>
 

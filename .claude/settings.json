@@ -10,7 +10,24 @@
       "Bash(brew install *)",
       "Bash(npx tsc *)",
       "Bash(grep -n \"price\\\\|pricing\\\\|500\\\\|800\\\\|299\\\\|\\\\$\" \"/Users/arjan/Library/CloudStorage/OneDrive-UniversityofGuelph/CLAUDE PRACTICE/WEBSITE PRACTICE/built-to-rank/app/services/page.tsx\" -i)",
-      "Bash(grep -E \"\\\\.\\(jpg|png|gif|svg|avif|mp4\\)$\")"
+      "Bash(grep -E \"\\\\.\\(jpg|png|gif|svg|avif|mp4\\)$\")",
+      "Bash(cwebp -version)",
+      "Bash(npx sharp-cli *)",
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(python3 /Users/arjan/.claude/skills/banana/scripts/validate_setup.py)",
+      "Bash(python3 /Users/arjan/.claude/skills/banana/scripts/generate.py --help)",
+      "Bash(python3 /Users/arjan/.claude/skills/banana/scripts/generate.py --aspect-ratio 16:9 --resolution 2K --model gemini-3.1-flash-image-preview --prompt 'A sturdy iPhone with a rugged dark protective case held upright in the thick calloused hand of a trades worker, oil-stained knuckles and a faint ring of grease beneath the fingernails. The glowing phone screen displays a Google Maps style local business panel with a star rating and a prominent green call button visible at the bottom of the screen. The hand and phone are centered against a softly blurred outdoor background showing the dark silhouette of scaffolding and construction equipment, with warm amber safety lights dissolving into soft bokeh behind. Tight close-up composition, 85mm equivalent perspective at f/1.4, shallow depth of field with the phone screen razor sharp and the background a wash of warm amber bokeh. Violet and indigo rim lighting catches the beveled edges of the phone case and the worker'\\\\''s knuckles. Shot on a Sony A7R IV. WIRED magazine tech editorial aesthetic. NEVER include any readable business name or text on the phone screen.')",
+      "Bash(python /Users/arjan/.claude/skills/seo-audit/scripts/fetch_page.py https://builttorank.ca/)",
+      "Bash(python3 /Users/arjan/.claude/skills/seo-audit/scripts/fetch_page.py https://builttorank.ca/)",
+      "Bash(python3 /Users/arjan/.claude/skills/seo-audit/scripts/google_auth.py --check)",
+      "Bash(python3 /Users/arjan/.claude/skills/seo-audit/scripts/backlinks_auth.py --check)",
+      "Bash(curl -s https://builttorank.ca/ grep -oP '\\(?<=<script type=\"application/ld\\\\+json\">\\).*?\\(?=</script>\\)' /tmp/btr_homepage.html)",
+      "Bash(python3 -m json.tool)",
+      "Bash(sips --help)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL OK'\\)\")",
+      "Bash(python3 -c \"import subprocess; print\\(subprocess.run\\(['sips', '--version'], capture_output=True, text=True\\).stdout\\)\")",
+      "Bash(python3 -)"
     ]
   }
 }

@@ -129,6 +129,7 @@ export default function RootLayout({
       className={`${inter.variable} ${plusJakartaSans.variable} ${bebasNeue.variable}`}
     >
       <head>
+        <link rel="preload" as="image" href="/hero-poster.webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

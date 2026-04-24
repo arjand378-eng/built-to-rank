@@ -1,5 +1,5 @@
 ---
-title: "Local SEO for Contractors: How to Build a Stronger Google Presence"
+title: "Local SEO for Contractors in Brampton"
 date: "February 28, 2026"
 readTime: "7 min read"
 category: "SEO"

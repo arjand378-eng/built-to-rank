@@ -1,5 +1,5 @@
 ---
-title: "5 Things Your Trades Business Website Must Have (And Most Don't)"
+title: "5 Things Every Trades Website Must Have"
 date: "February 10, 2026"
 readTime: "4 min read"
 category: "Web Design"
