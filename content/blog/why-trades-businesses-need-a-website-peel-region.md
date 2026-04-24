@@ -1,5 +1,5 @@
 ---
-title: "Why Every Trades Business Needs a Website in 2026"
+title: "Why Trades Businesses Need a Website in 2026"
 date: "March 15, 2026"
 readTime: "5 min read"
 category: "Business"

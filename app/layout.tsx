@@ -60,6 +60,7 @@ const schema = {
   "description": "Custom web design and local SEO for trades businesses across the GTA, Ontario. Plumbers, roofers, HVAC, landscapers, and contractors.",
   "url": siteUrl,
   "image": `${siteUrl}/og-image.jpg`,
+  "logo": { "@type": "ImageObject", "url": `${siteUrl}/logo.webp`, "width": 512, "height": 512 },
   "telephone": "+16476578525",
   "email": "info@builttorank.ca",
   "founder": { "@type": "Person", "name": "Arjan Dhillon" },

@@ -10,8 +10,20 @@ import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "About | Built to Rank — Web Design & SEO for Trades",
-  description: "Meet Arjan Dhillon, the developer behind Built to Rank. Custom websites and local SEO foundations for trades businesses.",
+  description: "Meet Arjan Dhillon, the developer behind Built to Rank. Custom websites and local SEO for trades businesses in Brampton, Peel Region, and the GTA. Work directly with the builder.",
   alternates: { canonical: "https://builttorank.ca/about" },
+  openGraph: {
+    title: "About | Built to Rank — Web Design & SEO for Trades",
+    description: "Meet Arjan Dhillon, the developer behind Built to Rank. Custom websites and local SEO for trades businesses in Brampton, Peel Region, and the GTA. Work directly with the builder.",
+    url: "https://builttorank.ca/about",
+    images: [{ url: "https://builttorank.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Built to Rank — Web Design & SEO for Trades",
+    description: "Meet Arjan Dhillon, the developer behind Built to Rank. Custom websites and local SEO for trades businesses in Brampton, Peel Region, and the GTA.",
+    images: ["https://builttorank.ca/og-image.jpg"],
+  },
 };
 
 const process = [
@@ -64,9 +76,20 @@ export default function About() {
     ],
   };
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arjan Dhillon",
+    "url": "https://builttorank.ca/about",
+    "jobTitle": "Web Designer & Local SEO Specialist",
+    "worksFor": { "@type": "Organization", "name": "Built to Rank", "url": "https://builttorank.ca" },
+    "knowsAbout": ["Web Design", "Local SEO", "Next.js", "Google Business Profile Optimization"],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <Navbar />
       <main id="main-content">
         {/* Hero */}

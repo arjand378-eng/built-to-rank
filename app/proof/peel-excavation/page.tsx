@@ -29,7 +29,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://builttorank.ca" },
-    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://builttorank.ca/proof/peel-excavation" },
+    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://builttorank.ca/#work" },
     { "@type": "ListItem", position: 3, name: "Peel Excavation Services", item: "https://builttorank.ca/proof/peel-excavation" },
   ],
 };

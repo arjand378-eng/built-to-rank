@@ -7,8 +7,20 @@ import Contact from "../components/Contact";
 
 export const metadata: Metadata = {
   title: "Contact | Built to Rank — Free Website Audit",
-  description: "Get a free website audit from Built to Rank. Web design and SEO foundations for trades businesses. Usually reply within a few hours.",
+  description: "Get a free website audit from Built to Rank. Web design and SEO for trades businesses in Brampton and the GTA. No pitch, no pressure — usually reply within a few hours.",
   alternates: { canonical: "https://builttorank.ca/contact" },
+  openGraph: {
+    title: "Contact | Built to Rank — Free Website Audit",
+    description: "Get a free website audit from Built to Rank. Web design and SEO for trades businesses in Brampton and the GTA. No pitch, no pressure — usually reply within a few hours.",
+    url: "https://builttorank.ca/contact",
+    images: [{ url: "https://builttorank.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Built to Rank — Free Website Audit",
+    description: "Get a free website audit from Built to Rank. Web design and SEO for trades businesses in Brampton and the GTA. Usually reply within a few hours.",
+    images: ["https://builttorank.ca/og-image.jpg"],
+  },
 };
 
 const details = [

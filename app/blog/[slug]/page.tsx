@@ -30,6 +30,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       url: `${base}/blog/${slug}`,
+      images: [{ url: `${base}/og-image.jpg`, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [`${base}/og-image.jpg`],
     },
   };
 }
@@ -42,21 +49,25 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   const base = "https://builttorank.ca";
 
+  const isoDate = new Date(post.date).toISOString().split("T")[0];
+
   const blogPostingSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.description,
-    "datePublished": post.date,
+    "datePublished": isoDate,
     "author": {
       "@type": "Person",
       "name": "Arjan Dhillon",
       "url": `${base}/about`,
     },
+    "image": { "@type": "ImageObject", "url": `${base}/og-image.jpg`, "width": 1200, "height": 630 },
     "publisher": {
       "@type": "Organization",
       "name": "Built to Rank",
       "url": base,
+      "logo": { "@type": "ImageObject", "url": `${base}/logo.webp`, "width": 512, "height": 512 },
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": `${base}/blog/${slug}` },
   };

@@ -10,8 +10,20 @@ import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Services | Built to Rank — Web Design & SEO for Trades",
-  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses. Built for local search.",
+  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses in Brampton and the GTA. Websites from $599 CAD. Built for local search.",
   alternates: { canonical: "https://builttorank.ca/services" },
+  openGraph: {
+    title: "Services | Built to Rank — Web Design & SEO for Trades",
+    description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses in Brampton and the GTA. Websites from $599 CAD. Built for local search.",
+    url: "https://builttorank.ca/services",
+    images: [{ url: "https://builttorank.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Built to Rank — Web Design & SEO for Trades",
+    description: "Custom website design, local SEO setup, and monthly retainer for trades businesses in Brampton and the GTA. Websites from $599 CAD.",
+    images: ["https://builttorank.ca/og-image.jpg"],
+  },
 };
 
 const webFeatures = [
@@ -77,9 +89,51 @@ export default function Services() {
     ],
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Built to Rank Services",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Website Design & Development",
+          "description": "Custom mobile-first Next.js website for trades businesses. No templates.",
+          "provider": { "@type": "Organization", "name": "Built to Rank", "url": "https://builttorank.ca" },
+          "offers": { "@type": "Offer", "price": "599", "priceCurrency": "CAD" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Website + SEO Bundle",
+          "description": "Custom website with complete local SEO setup for trades businesses in the GTA.",
+          "provider": { "@type": "Organization", "name": "Built to Rank", "url": "https://builttorank.ca" },
+          "offers": { "@type": "Offer", "price": "799", "priceCurrency": "CAD" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Monthly Retainer",
+          "description": "Ongoing website maintenance, SEO monitoring, and priority support.",
+          "provider": { "@type": "Organization", "name": "Built to Rank", "url": "https://builttorank.ca" },
+          "offers": { "@type": "Offer", "price": "299", "priceCurrency": "CAD" },
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
       <main id="main-content">
         {/* Hero */}

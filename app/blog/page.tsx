@@ -13,8 +13,20 @@ import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog | Built to Rank — Web Design & SEO Tips for Trades",
-  description: "Practical guides on web design, local SEO, and digital marketing for trades businesses.",
+  description: "Practical guides on web design, local SEO, and digital marketing for trades businesses in the GTA. Written by Arjan Dhillon at Built to Rank.",
   alternates: { canonical: "https://builttorank.ca/blog" },
+  openGraph: {
+    title: "Blog | Built to Rank — Web Design & SEO Tips for Trades",
+    description: "Practical guides on web design, local SEO, and digital marketing for trades businesses in the GTA. Written by Arjan Dhillon at Built to Rank.",
+    url: "https://builttorank.ca/blog",
+    images: [{ url: "https://builttorank.ca/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Built to Rank — Web Design & SEO Tips for Trades",
+    description: "Practical guides on web design, local SEO, and digital marketing for trades businesses in the GTA.",
+    images: ["https://builttorank.ca/og-image.jpg"],
+  },
 };
 
 export default function Blog() {
