@@ -9,8 +9,8 @@ import Footer from "../components/Footer";
 import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "About | Built to Rank — Web Design & SEO, GTA",
-  description: "Meet Arjan Dhillon, the GTA developer behind Built to Rank. Custom websites and local SEO for trades businesses across the GTA.",
+  title: "About | Built to Rank — Web Design & SEO for Trades",
+  description: "Meet Arjan Dhillon, the developer behind Built to Rank. Custom websites and local SEO foundations for trades businesses.",
   alternates: { canonical: "https://builttorank.ca/about" },
 };
 
@@ -34,19 +34,19 @@ const process = [
     step: "03",
     title: "SEO Setup",
     time: "Day 35–42",
-    desc: "Schema markup, sitemap, robots.txt, Google Business Profile guidance, and on-page optimization. Built to rank from day one, not added as an afterthought.",
+    desc: "Schema markup, sitemap, robots.txt, Google Business Profile guidance, and on-page optimization. Built for local search from day one, not added as an afterthought.",
   },
   {
     icon: <Rocket size={20} weight="duotone" />,
     step: "04",
     title: "Launch",
-    time: "Day 42–47",
+    time: "Final Stage",
     desc: "Deployed, live, and tested on every device. You get a site that works, plus support from there if you need it.",
   },
 ];
 
 const guarantees = [
-  "30–47 day delivery",
+  "Clear timeline before work starts",
   "100% custom, no templates",
   "SEO included, not extra",
   "Free revisions until you're satisfied",
@@ -58,7 +58,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section
           className="relative flex items-end pb-12 px-6 pt-40 overflow-hidden"
@@ -94,19 +94,19 @@ export default function About() {
               <p className="section-eyebrow">The Story</p>
               <p className="text-base leading-relaxed text-white/85">
                 I got into web design through a simple door: a friend&apos;s uncle who runs an
-                excavation company in Brampton needed a website. He&apos;d been in business for
-                years but had zero digital presence. No site, not ranking on Google, losing
-                jobs to competitors who showed up online.
+                excavation company needed a website. He&apos;d been in business for
+                years but had zero digital presence. No site, no clear place to send
+                customers, and no foundation for showing up in local search.
               </p>
               <p className="text-base leading-relaxed text-white/85">
                 I built him a full custom website from scratch. Video hero, scroll animations,
-                contact form, full SEO setup. Launched in 47 days. A few months later, he was
-                getting calls from people who found him on Google. That had never happened before.
+                contact form, full SEO setup. The project showed how much stronger a trades
+                business looks when customers can actually find and trust it online.
               </p>
               <p className="text-base leading-relaxed text-white/85">
-                That project showed me two things: trades businesses in the GTA desperately need
-                quality websites, and most of them are getting ripped off by cheap template shops
-                or ignored by big agencies.
+                That project showed me two things: trades businesses desperately need
+                quality websites, and many are stuck choosing between cheap template shops
+                and big agencies that do not understand the trade.
               </p>
               <p className="text-base leading-relaxed text-white/85">
                 Built to Rank is my answer to that.
@@ -122,7 +122,7 @@ export default function About() {
               }}
             >
               <p className="text-xs font-semibold tracking-widest uppercase text-violet-400">
-                Our Guarantee
+                What You Can Expect
               </p>
               <ul className="flex flex-col gap-3">
                 {guarantees.map((g) => (
@@ -134,7 +134,7 @@ export default function About() {
               </ul>
               <Separator className="opacity-20" />
               <p className="text-xs text-muted-foreground leading-relaxed">
-                No agency fees. No middlemen. You work directly with the developer
+                No agency fees. No middlemen. You work directly with me, the developer
                 building your site from day one.
               </p>
             </div>
@@ -224,10 +224,9 @@ export default function About() {
                 <span className="text-muted-foreground">General Knowledge.</span>
               </h2>
               <p className="text-base leading-relaxed text-white/85">
-                I focus exclusively on trades businesses across the GTA for one reason:
-                specialization beats generalization every time. I know what Brampton
-                homeowners type into Google when they need a plumber. I know what converts
-                a roofing inquiry into a booked job.
+                I focus on trades businesses for one reason: specialization beats
+                generalization every time. I know what homeowners search for when they
+                need a contractor, and I know how to make a trade business easier to trust.
               </p>
               <p className="text-base leading-relaxed text-white/85">
                 A general web agency has to learn your industry from scratch every time.

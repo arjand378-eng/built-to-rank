@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "1",    label: "Site Launched",        sub: "and counting"         },
-  { value: "47",   label: "Days to Go Live",       sub: "start to launch"      },
   { value: "0",    label: "Templates Used",         sub: "100% custom code"    },
-  { value: "100%", label: "Custom Built",          sub: "zero templates"       },
+  { value: "1:1",  label: "Direct Access",        sub: "work with the builder" },
+  { value: "Free", label: "Audit First",          sub: "written review"        },
 ];
 
 export default function StatsBar() {

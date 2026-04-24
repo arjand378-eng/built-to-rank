@@ -94,7 +94,7 @@ export default function Hero() {
             variant="outline"
             className="border-violet-700/40 bg-violet-900/20 text-violet-300 text-[0.68rem] tracking-[0.14em] uppercase px-3 py-1 rounded-full"
           >
-            Local SEO + Web Design &middot; Peel Region &amp; GTA
+            Local SEO + Web Design &middot; GTA Trades
           </Badge>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function Hero() {
             letterSpacing: "0.02em",
           }}
         >
-          We Get Trades Businesses{" "}
+          I Build Trades Websites{" "}
           <span
             style={{
               background: "linear-gradient(135deg,#A78BFA 0%,#818CF8 100%)",
@@ -116,7 +116,7 @@ export default function Hero() {
               backgroundClip: "text",
             }}
           >
-            Found on Google.
+            Built to Be Found.
           </span>
           <br />So Your Phone Rings.
         </motion.h1>
@@ -127,7 +127,8 @@ export default function Hero() {
           style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9)" }}
         >
           You run the jobs. I build the website that makes your phone ring.
-          Custom sites + local SEO for trades businesses across the GTA.
+          Custom sites + local SEO foundations for trades businesses that need
+          more calls from local search.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 mt-1">
@@ -147,7 +148,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            See Our Work
+            See My Work
           </motion.a>
         </motion.div>
 
@@ -162,9 +163,9 @@ export default function Hero() {
         >
           <span className="text-xs font-semibold text-white/90">1 Site Delivered</span>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <span className="text-xs font-semibold text-white/90">47 Days to Launch</span>
+          <span className="text-xs font-semibold text-white/90">Direct Builder Access</span>
           <Separator orientation="vertical" className="h-3.5 opacity-25" />
-          <span className="text-xs font-semibold text-white/90">GTA-Based</span>
+          <span className="text-xs font-semibold text-white/90">Free Audit First</span>
         </motion.div>
 
       </motion.div>

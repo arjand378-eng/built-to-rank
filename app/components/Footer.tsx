@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,6 +16,9 @@ const serviceLinks = [
   { label: "Website Design",    href: "/services" },
   { label: "SEO Optimization",  href: "/services" },
   { label: "Monthly Retainer",  href: "/services" },
+];
+const trustLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 export default function Footer() {
@@ -40,7 +44,7 @@ export default function Footer() {
               Ready to Get Found on Google?
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Let&apos;s build something that works for your business.
+              Work directly with the person building your site.
             </p>
           </div>
           <a
@@ -58,7 +62,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div className="flex flex-col gap-3 max-w-xs">
-            <a href="/" className="inline-flex items-center">
+            <Link href="/" className="inline-flex items-center">
               <span
                 className="text-foreground"
                 style={{ fontFamily: "var(--font-bebas)", fontSize: "1.35rem", letterSpacing: "0.04em" }}
@@ -75,9 +79,9 @@ export default function Footer() {
                   Rank
                 </span>
               </span>
-            </a>
+            </Link>
             <p className="text-xs leading-relaxed text-muted-foreground">
-              Web design &amp; SEO for trades businesses across the GTA.
+              Web design &amp; SEO for trades businesses that need better local search.
             </p>
           </div>
 
@@ -96,10 +100,9 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">Coverage</p>
-            {["GTA, Ontario, Canada", "Brampton · Mississauga · Vaughan", "Remote work available nationwide"].map((l) => (
-              <p key={l} className="text-sm text-muted-foreground">{l}</p>
-            ))}
+            <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">Contact</p>
+            <a href="mailto:info@builttorank.ca" className="text-sm text-muted-foreground hover:text-foreground transition-colors">info@builttorank.ca</a>
+            <a href="tel:+16476578525" className="text-sm text-muted-foreground hover:text-foreground transition-colors">647-657-8525</a>
           </div>
         </div>
 
@@ -109,7 +112,14 @@ export default function Footer() {
           <p className="text-xs text-muted-foreground">
             &copy; 2026 Built to Rank. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground">Designed &amp; built in the GTA.</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            {trustLinks.map((link) => (
+              <a key={link.href} href={link.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                {link.label}
+              </a>
+            ))}
+            <p className="text-xs text-muted-foreground">Designed &amp; built by Arjan Dhillon.</p>
+          </div>
         </div>
       </div>
     </footer>

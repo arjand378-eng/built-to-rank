@@ -2,20 +2,29 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { PaperPlaneTilt, Phone, EnvelopeSimple, MapPin } from "@phosphor-icons/react";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Check, EnvelopeSimple, PaperPlaneTilt, Phone } from "@phosphor-icons/react";
+import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const inputCls =
   "w-full px-4 py-2.5 rounded-lg bg-[#1A1A2E] border border-white/7 text-foreground text-sm placeholder:text-muted-foreground outline-none transition-colors focus:border-violet-700/50";
+const contactEmail = "info@builttorank.ca";
+
+const auditItems = [
+  "Mobile and speed issues",
+  "Google Business Profile gaps",
+  "Local SEO quick wins",
+  "Call and form conversion problems",
+  "Clear next steps, no pressure",
+];
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", business: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -23,15 +32,19 @@ export default function Contact() {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
     try {
       const key = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
       if (!key) {
         console.error("Missing NEXT_PUBLIC_WEB3FORMS_KEY env var");
+        setError(`The form is temporarily unavailable. Please email ${contactEmail} instead.`);
         setLoading(false);
         return;
       }
       const data = new FormData(e.currentTarget);
       data.append("access_key", key);
+      data.append("subject", "New Built to Rank audit request");
+      data.append("from_name", "Built to Rank Website");
       const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
       const json = await res.json();
       if (json.success) {
@@ -42,9 +55,11 @@ export default function Contact() {
             form_location: "contact",
           });
         }
+      } else {
+        setError(`Message failed to send. Please try again or email ${contactEmail}.`);
       }
     } catch {
-      // silently fail — user sees the form still
+      setError(`Message failed to send. Please try again or email ${contactEmail}.`);
     }
     setLoading(false);
   };
@@ -78,7 +93,7 @@ export default function Contact() {
             <span className="text-muted-foreground">Something That Ranks.</span>
           </h2>
           <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl tracking-wide">
-            Send us your current site (or your Google Business Profile link). You&apos;ll get a free written audit back showing where you&apos;re losing customers and exactly how to fix it. No sales pitch.
+            Send me your current site or Google Business Profile link. I&apos;ll send back a free written audit showing where you&apos;re losing customers and what I&apos;d fix first. No sales pitch.
           </p>
         </motion.div>
 
@@ -148,18 +163,26 @@ export default function Contact() {
                         id="contact-message"
                         name="message"
                         rows={4}
-                        placeholder="We're a roofing company in Brampton. No website yet, need to start getting found on Google..."
+                        placeholder="I'm a roofing contractor with no website yet. I need to start getting found on Google..."
                         value={form.message}
                         onChange={handle}
                         className={inputCls + " resize-none"}
                       />
                     </div>
+                    {error ? (
+                      <p
+                        role="alert"
+                        className="rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm leading-relaxed text-red-100"
+                      >
+                        {error}
+                      </p>
+                    ) : null}
                     <Button
                       type="submit"
                       disabled={loading}
                       className="self-start bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] gap-2 h-9 px-5 active:scale-[0.98] disabled:opacity-60"
                     >
-                      {loading ? "Sending…" : <><span>Send Message</span><PaperPlaneTilt size={15} weight="bold" /></>}
+                      {loading ? "Sending…" : <><span>Request Free Audit</span><PaperPlaneTilt size={15} weight="bold" /></>}
                     </Button>
                   </form>
                 </CardContent>
@@ -169,15 +192,43 @@ export default function Contact() {
 
           {/* Info — 2 cols */}
           <ScrollReveal animation="slideRight" delay={0.1} className="lg:col-span-2 flex flex-col gap-5">
+            <Card
+              className="rounded-2xl border-violet-700/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+              style={{ background: "linear-gradient(145deg,rgba(109,40,217,0.1),rgba(79,70,229,0.05))" }}
+            >
+              <CardContent className="p-7 flex flex-col gap-4">
+                <div>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-violet-400">
+                    Your Free Audit Includes
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/78">
+                    A quick written breakdown of what is helping, what is hurting, and what I&apos;d fix first.
+                  </p>
+                </div>
+                <ul className="flex flex-col gap-2.5">
+                  {auditItems.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-white/82">
+                      <span
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-violet-300"
+                        style={{ background: "rgba(109,40,217,0.18)", border: "1px solid rgba(109,40,217,0.28)" }}
+                      >
+                        <Check size={12} weight="bold" />
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
             <Card className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
               <CardContent className="p-7 flex flex-col gap-5">
                 <p className="text-xs font-semibold tracking-widest uppercase text-violet-400">
                   Contact Details
                 </p>
                 {[
-                  { icon: <EnvelopeSimple size={17} weight="duotone" />, label: "Email", value: "builttorank@hotmail.com", href: "mailto:builttorank@hotmail.com" },
+                  { icon: <EnvelopeSimple size={17} weight="duotone" />, label: "Email", value: contactEmail, href: `mailto:${contactEmail}` },
                   { icon: <Phone size={17} weight="duotone" />,          label: "Phone", value: "647-657-8525", href: "tel:+16476578525" },
-                  { icon: <MapPin size={17} weight="duotone" />,         label: "Location", value: "GTA, Ontario, Canada", href: null },
                 ].map(({ icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-3">
                     <div
@@ -208,7 +259,7 @@ export default function Contact() {
                 {[
                   "I review your site / GBP (usually within hours)",
                   "You get a free written audit, no sales pitch",
-                  "If it's a fit, we hop on a 15-min call",
+                  "If it's a fit, we book a 15-min call",
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-2.5">
                     <div

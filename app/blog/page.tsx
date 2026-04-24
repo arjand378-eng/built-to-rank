@@ -12,8 +12,8 @@ import ScrollReveal from "../components/ScrollReveal";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Built to Rank — Web Design & SEO Tips for GTA Trades",
-  description: "Practical guides on web design, local SEO, and digital marketing for trades businesses across the GTA.",
+  title: "Blog | Built to Rank — Web Design & SEO Tips for Trades",
+  description: "Practical guides on web design, local SEO, and digital marketing for trades businesses.",
   alternates: { canonical: "https://builttorank.ca/blog" },
 };
 
@@ -23,7 +23,7 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section
           className="relative pt-40 pb-12 px-6 overflow-hidden"
@@ -111,7 +111,7 @@ export default function Blog() {
               className="text-foreground leading-none"
               style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(2rem,4vw,3rem)", letterSpacing: "0.02em" }}
             >
-              Ready to Get Your Business Online?
+              Want a Free Website Audit?
             </h2>
             <a
               href="/contact"

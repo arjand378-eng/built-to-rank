@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import HashScroll from "./components/HashScroll";
 import StatsBar from "./components/StatsBar";
 import Statement from "./components/Statement";
+import WhyHire from "./components/WhyHire";
 import Services from "./components/Services";
 import HowItWorks from "./components/HowItWorks";
 import Portfolio from "./components/Portfolio";
@@ -17,10 +18,11 @@ export default function Home() {
     <>
       <Navbar />
       <HashScroll />
-      <main>
+      <main id="main-content">
         <Hero />
         <StatsBar />
         <Statement />
+        <WhyHire />
         <Services />
         <HowItWorks />
         <Portfolio />

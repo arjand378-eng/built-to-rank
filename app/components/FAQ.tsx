@@ -8,11 +8,11 @@ import { Separator } from "@/components/ui/separator";
 const faqs = [
   {
     q: "How much does a website cost?",
-    a: "Most trades websites start at $500–$800. The final price depends on how many pages you need and what features matter to your business. A plumber with 3 services is different from a general contractor with 10. You'll get a clear quote before anything starts. No surprises, no hidden fees.",
+    a: "Most trades websites start at $599, and the website + SEO bundle starts at $799. The final price depends on how many pages you need and what features matter to your business. A plumber with 3 services is different from a general contractor with 10. You'll get a clear project estimate before anything starts. No surprises, no hidden fees.",
   },
   {
     q: "How long does it take?",
-    a: "Typically 30–47 days from the first call to your site going live. You'll see the design before anything is finalized, and I don't launch until you're happy with it. If you need it faster, let me know. I can work around urgent timelines.",
+    a: "Timeline depends on the size of the site, how much content is ready, and how quickly reviews happen. You'll see the design before anything is finalized, and I don't launch until you're happy with it. If you have an urgent timeline, bring it up during the audit or first call.",
   },
   {
     q: "Do I need to be involved every day?",
@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     q: "Will this actually get me more calls?",
-    a: "The honest answer: a website alone doesn't guarantee calls overnight. What it does is make sure that when someone in Brampton or Mississauga searches for your trade, your business shows up instead of your competitor's. SEO builds momentum over 3–6 months, but once it kicks in, it keeps working for you without paying for ads.",
+    a: "The honest answer: a website alone doesn't guarantee calls overnight. What it does is give your business a stronger chance when someone nearby searches for your trade. SEO builds momentum over 3–6 months, and a properly built site gives that momentum somewhere solid to land.",
   },
   {
     q: "What do I need to get started?",
-    a: "Just a 15-minute call. No contracts to sign upfront, no money due until you've seen a proposal you're happy with. We talk about your business, I tell you exactly what I'd build and what it costs, and you decide if it makes sense.",
+    a: "Just a 15-minute call. No contracts before the proposal. You tell me about your business, I tell you exactly what I'd build and what it costs, and you decide if it makes sense.",
   },
 ];
 

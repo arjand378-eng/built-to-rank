@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X } from "@phosphor-icons/react";
@@ -64,12 +65,20 @@ export default function Navbar() {
         {scrolled && <Separator className="absolute bottom-0 left-0 right-0 opacity-40" />}
 
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a
+          <Link
             href="/"
-            className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+            className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Built to Rank logo"
+              width={36}
+              height={36}
+              className="rounded-lg"
+            />
             <span
-              className="text-2xl text-foreground"
+              className="hidden sm:inline text-2xl text-foreground"
               style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.04em" }}
             >
               Built to{" "}
@@ -84,7 +93,7 @@ export default function Navbar() {
                 Rank
               </span>
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
             {links.map((link) => (

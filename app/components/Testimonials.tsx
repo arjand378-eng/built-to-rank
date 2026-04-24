@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Rocket, Code, MapPin } from "@phosphor-icons/react";
+import { ArrowRight, Rocket, Code, MagnifyingGlass } from "@phosphor-icons/react";
 import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -19,8 +19,8 @@ const btnGhost = cn(
 const proofPoints = [
   {
     icon: Rocket,
-    label: "Shipped in 47 days",
-    note: "Discovery to live site. No templates.",
+    label: "Shipped as a real site",
+    note: "Discovery, custom build, and launch. No templates.",
   },
   {
     icon: Code,
@@ -28,11 +28,14 @@ const proofPoints = [
     note: "GSAP scroll, Framer Motion, custom components.",
   },
   {
-    icon: MapPin,
-    label: "Peel Region SEO",
+    icon: MagnifyingGlass,
+    label: "Local SEO Setup",
     note: "Schema, sitemap, GBP guidance, on-page keywords.",
   },
 ];
+
+const clientQuote =
+  "The new website made our excavation company look a lot more professional and credible. It gave customers a clear place to see our services, learn about our work, and contact us easily. Since getting the site live and improving our Google presence with SEO, we've seen more traffic and better visibility online. It's helped us stand out as a serious business and has brought more attention to our company.";
 
 export default function Testimonials() {
   return (
@@ -68,10 +71,10 @@ export default function Testimonials() {
             }}
           >
             Built. Shipped.<br />
-            <span className="text-muted-foreground">On Google.</span>
+            <span className="text-muted-foreground">Search Ready.</span>
           </h2>
           <p className="text-lg font-light leading-relaxed text-white/90 max-w-2xl mx-auto tracking-wide">
-            One live project in the GTA trades space. Full Next.js build, SEO-ready from
+            One live project in the trades space. Full Next.js build, SEO-ready from
             day one, deployed and running. The work speaks for itself.
           </p>
         </motion.div>
@@ -117,9 +120,9 @@ export default function Testimonials() {
             From the builder
           </p>
           <blockquote className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
-            &ldquo;I built peelexcavationservices.netlify.app in 47 days for an excavation
-            crew in Peel Region. Cinematic video hero, GSAP scroll animations, full SEO
-            setup, deployed on Netlify. It&apos;s live, mobile-optimized, and ranking.
+            &ldquo;I built peelexcavationservices.netlify.app for an excavation
+            crew. Cinematic video hero, GSAP scroll animations, full SEO
+            setup, deployed as a static site. It&apos;s live, mobile-optimized, and ready for local search.
             That&apos;s the quality I bring to every trades business I work with.&rdquo;
           </blockquote>
           <div className="flex items-center gap-3 mt-6">
@@ -133,38 +136,33 @@ export default function Testimonials() {
           </div>
         </motion.div>
 
-        {/*
-          TODO — CLIENT QUOTE PLACEHOLDER
-          When the Peel Excavation owner gives a 2-sentence quote + permission to use
-          his name/company, uncomment and fill in the block below. Do NOT use a fake
-          quote. See NEXT-STEPS.md Step 1 for the ask-message template.
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 90, damping: 20 }}
-            className="rounded-2xl p-8 md:p-10 mb-10"
-            style={{
-              background: "rgba(109,40,217,0.06)",
-              border: "1px solid rgba(109,40,217,0.25)",
-            }}
-          >
-            <p className="text-sm font-semibold text-violet-400 tracking-widest uppercase mb-5">
-              What the client said
-            </p>
-            <blockquote className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
-              &ldquo;[REAL QUOTE FROM OWNER — 1 to 2 sentences, verbatim]&rdquo;
-            </blockquote>
-            <div className="flex items-center gap-3 mt-6">
-              <div className="w-10 h-10 rounded-full bg-white/10" />
-              <div>
-                <p className="text-sm font-semibold text-white">[OWNER NAME]</p>
-                <p className="text-xs text-white/60">Peel Excavation Services, Brampton ON</p>
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 90, damping: 20 }}
+          className="rounded-2xl p-8 md:p-10 mb-10"
+          style={{
+            background: "rgba(109,40,217,0.06)",
+            border: "1px solid rgba(109,40,217,0.25)",
+          }}
+        >
+          <p className="text-sm font-semibold text-violet-400 tracking-widest uppercase mb-5">
+            What the client said
+          </p>
+          <blockquote className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
+            &ldquo;{clientQuote}&rdquo;
+          </blockquote>
+          <div className="flex items-center gap-3 mt-6">
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white font-semibold text-sm">
+              PE
             </div>
-          </motion.div>
-        */}
+            <div>
+              <p className="text-sm font-semibold text-white">Peel Excavation Services</p>
+              <p className="text-xs text-white/60">Excavation & demolition contractor</p>
+            </div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

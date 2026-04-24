@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Bebas_Neue } from "next/font/google";
 import Script from "next/script";
+import MobileCTA from "./components/MobileCTA";
 import "./globals.css";
 
-const geist = Geist({
-  variable: "--font-geist",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
   display: "swap",
 });
@@ -20,24 +27,24 @@ const bebasNeue = Bebas_Neue({
 const siteUrl = "https://builttorank.ca";
 
 export const metadata: Metadata = {
-  title: "Web Design & SEO for GTA Trades | Built to Rank",
+  title: "Web Design & SEO for Trades | Built to Rank",
   description:
-    "Built to Rank builds custom websites and gets trades businesses across the GTA found on Google. Web design + SEO for plumbers, roofers, landscapers, and contractors. Get a free quote.",
+    "Built to Rank builds custom websites and local SEO foundations for trades businesses. Work directly with the builder. Get a free website audit.",
   alternates: { canonical: siteUrl },
   openGraph: {
-    title: "Web Design & SEO for GTA Trades | Built to Rank",
+    title: "Web Design & SEO for Trades | Built to Rank",
     description:
-      "Custom websites and SEO for trades businesses across the GTA. Plumbers, roofers, landscapers, contractors. Free quote.",
+      "Custom websites and SEO foundations for trades businesses. Work directly with the builder. Free written audit.",
     type: "website",
     locale: "en_CA",
     url: siteUrl,
     siteName: "Built to Rank",
-    images: [{ url: `${siteUrl}/og-image.jpg`, width: 1200, height: 630, alt: "Built to Rank — Web Design & SEO for GTA Trades" }],
+    images: [{ url: `${siteUrl}/og-image.jpg`, width: 1200, height: 630, alt: "Built to Rank — Web Design & SEO for Trades" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design & SEO for GTA Trades | Built to Rank",
-    description: "Custom websites and SEO for trades businesses across the GTA.",
+    title: "Web Design & SEO for Trades | Built to Rank",
+    description: "Custom websites and SEO foundations for trades businesses.",
     images: [`${siteUrl}/og-image.jpg`],
   },
 };
@@ -54,7 +61,7 @@ const schema = {
   "url": siteUrl,
   "image": `${siteUrl}/og-image.jpg`,
   "telephone": "+16476578525",
-  "email": "builttorank@hotmail.com",
+  "email": "info@builttorank.ca",
   "founder": { "@type": "Person", "name": "Arjan Dhillon" },
   "address": {
     "@type": "PostalAddress",
@@ -89,7 +96,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${bebasNeue.variable}`}
+      className={`${inter.variable} ${plusJakartaSans.variable} ${bebasNeue.variable}`}
     >
       <head>
         <script
@@ -98,7 +105,11 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         {children}
+        <MobileCTA />
         {gaId ? (
           <>
             <Script

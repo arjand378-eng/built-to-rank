@@ -9,11 +9,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-const tags = ["Custom Build", "Mobile-First", "SEO Setup", "Fast Load Times", "GTA"];
+const tags = ["Custom Build", "Mobile-First", "SEO Setup", "Fast Load Times", "Direct Builder"];
 const results = [
-  { value: "47",   label: "Days to Launch"     },
   { value: "0",    label: "Templates Used"     },
-  { value: "100%", label: "Custom Next.js"     },
+  { value: "5",    label: "Core Pages Built"   },
+  { value: "SEO",  label: "Foundation Setup"   },
 ];
 
 export default function Portfolio() {
@@ -153,15 +153,20 @@ export default function Portfolio() {
                       Peel Excavation Services
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Excavation & Demolition, Brampton, Ontario
+                      Excavation & Demolition Website
                     </p>
                   </div>
 
                   <p className="text-sm leading-relaxed text-white/90">
-                    Full custom website for a new excavation contractor in Brampton with
-                    zero online presence. Built from scratch, SEO-ready from day one,
-                    and live in under 47 days. No templates. No shortcuts.
+                    Full custom website for a new excavation contractor with zero online
+                    presence. Built from scratch, SEO-ready from day one, and launched as
+                    a custom static site. No templates. No shortcuts.
                   </p>
+
+                  <blockquote className="rounded-xl border border-violet-500/20 bg-violet-950/15 px-4 py-3 text-sm leading-relaxed text-white/82">
+                    &ldquo;The new website made our excavation company look a lot more
+                    professional and credible.&rdquo;
+                  </blockquote>
 
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-3">
@@ -190,7 +195,7 @@ export default function Portfolio() {
                       "Contact form emailing client directly",
                       "Google Business Profile guidance",
                       "Schema, sitemap, on-page SEO",
-                      "Live in 47 days, zero templates",
+                      "Custom build, zero templates",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Check size={12} weight="bold" className="text-violet-600 shrink-0" />

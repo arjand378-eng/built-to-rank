@@ -22,6 +22,7 @@ const btnGhost = cn(
 export default function NotFound() {
   return (
     <main
+      id="main-content"
       className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
       style={{ background: "linear-gradient(160deg,#0A0A14 0%,#080810 60%,#0B0A16 100%)" }}
     >
@@ -52,7 +53,7 @@ export default function NotFound() {
         </h1>
         <p className="text-lg font-light leading-relaxed text-white/75 max-w-lg mx-auto mb-10 tracking-wide">
           The page you&apos;re after doesn&apos;t exist, was moved, or never shipped. Head
-          back home or send us a note and we&apos;ll help.
+          back home or send me a note and I&apos;ll help.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
           <Link href="/" className={btnPrimary}>

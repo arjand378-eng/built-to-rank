@@ -1,28 +1,26 @@
 import type { Metadata } from "next";
-import { Phone, EnvelopeSimple, MapPin } from "@phosphor-icons/react/dist/ssr";
-import { Separator } from "@/components/ui/separator";
+import { Phone, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact | Built to Rank — Free Website Audit, GTA Web Design & SEO",
-  description: "Get a free website audit from Built to Rank. Web design and SEO for trades businesses across the GTA. Usually reply within a few hours.",
+  title: "Contact | Built to Rank — Free Website Audit",
+  description: "Get a free website audit from Built to Rank. Web design and SEO foundations for trades businesses. Usually reply within a few hours.",
   alternates: { canonical: "https://builttorank.ca/contact" },
 };
 
 const details = [
-  { icon: <EnvelopeSimple size={17} weight="duotone" />, label: "Email", value: "builttorank@hotmail.com", href: "mailto:builttorank@hotmail.com" },
+  { icon: <EnvelopeSimple size={17} weight="duotone" />, label: "Email", value: "info@builttorank.ca", href: "mailto:info@builttorank.ca" },
   { icon: <Phone size={17} weight="duotone" />, label: "Phone", value: "647-657-8525", href: "tel:+16476578525" },
-  { icon: <MapPin size={17} weight="duotone" />, label: "Location", value: "GTA, Ontario, Canada", href: null },
 ];
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section
           className="relative pt-40 pb-12 px-6 overflow-hidden"
@@ -55,7 +53,7 @@ export default function ContactPage() {
         {/* Contact details strip */}
         <section className="py-10 px-6" style={{ background: "#08080F" }}>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {details.map(({ icon, label, value, href }) => (
                 <Card key={label} className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
                   <CardContent className="p-5 flex items-center gap-3">

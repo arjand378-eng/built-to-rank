@@ -12,12 +12,12 @@ import { Badge } from "@/components/ui/badge";
 const skills = [
   { icon: <Code size={15} weight="duotone" />,    label: "Next.js & React"       },
   { icon: <TrendUp size={15} weight="duotone" />, label: "SEO & Google Rankings" },
-  { icon: <MapPin size={15} weight="duotone" />,  label: "GTA & Ontario"        },
+  { icon: <MapPin size={15} weight="duotone" />,  label: "Trades-Focused"       },
 ];
 const stats = [
   { value: "1",    label: "Site Live"         },
-  { value: "100%", label: "On-Time Delivery"  },
-  { value: "GTA",  label: "Based & Available" },
+  { value: "Clear", label: "Timeline"         },
+  { value: "1:1",  label: "Direct Access"     },
 ];
 
 export default function About() {
@@ -58,15 +58,14 @@ export default function About() {
             </h2>
 
             <p className="text-base leading-relaxed max-w-[52ch] text-white/85">
-              I build production-quality websites for trades businesses across the
-              GTA. My first client was a friend&apos;s uncle running an
-              excavation company in Brampton. That project showed me how much a real
-              website changes the game for local trades.
+              I build production-quality websites for trades businesses. My first
+              client was a friend&apos;s uncle running an excavation company. That
+              project showed me how much a real website changes the game for local trades.
             </p>
             <p className="text-base leading-relaxed max-w-[52ch] text-white/85">
-              No templates. No agencies with 20 middlemen. Just a developer who
-              understands the local trades niche and builds sites that actually get
-              found on Google.
+              No templates. No agency layers. Just direct access to the developer
+              who understands the local trades niche and builds sites around the
+              way customers search.
             </p>
 
             {/* Skill chips */}
@@ -139,7 +138,7 @@ export default function About() {
                 </div>
                 <Separator className="opacity-20" />
                 <p className="text-xs text-muted-foreground">
-                  Serving Brampton, Mississauga, Vaughan & the GTA.
+                  Built for trades that depend on calls, trust, and local search.
                 </p>
               </CardContent>
             </Card>

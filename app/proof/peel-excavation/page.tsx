@@ -12,12 +12,12 @@ import Footer from "../../components/Footer";
 export const metadata: Metadata = {
   title: "Peel Excavation Services — Case Study | Built to Rank",
   description:
-    "How I built a full custom Next.js website for a new excavation contractor in Brampton, Ontario — from zero online presence to a live, SEO-ready site in 47 days.",
+    "How I built a full custom Next.js website for a new excavation contractor in Brampton, Ontario, from zero online presence to a live, SEO-ready site.",
   alternates: { canonical: "https://builttorank.ca/proof/peel-excavation" },
   openGraph: {
     title: "Peel Excavation Services — Case Study | Built to Rank",
     description:
-      "Full custom Next.js site for a Brampton excavation contractor. Zero online presence to live and SEO-ready in 47 days.",
+      "Full custom Next.js site for a Brampton excavation contractor. Zero online presence to live and SEO-ready.",
     type: "article",
     url: "https://builttorank.ca/proof/peel-excavation",
     images: [{ url: "https://builttorank.ca/og-image.jpg", width: 1200, height: 675 }],
@@ -39,8 +39,15 @@ const stack = [
   { label: "Styling",   value: "Tailwind CSS" },
   { label: "Animation", value: "GSAP + ScrollTrigger, Framer Motion" },
   { label: "Forms",     value: "Nodemailer (email direct to client)" },
-  { label: "Hosting",   value: "Netlify (static, auto-deploy)" },
+  { label: "Hosting",   value: "Static hosting with optimized production build" },
   { label: "SEO",       value: "Schema markup, sitemap, robots.txt, OG tags" },
+];
+
+const proofStats = [
+  { value: "0", label: "Templates Used" },
+  { value: "5", label: "Core Pages Built" },
+  { value: "SEO", label: "Foundation Setup" },
+  { value: "Next.js", label: "Custom Build" },
 ];
 
 const deliverables = [
@@ -56,6 +63,39 @@ const deliverables = [
   "On-page keyword optimization for Peel Region excavation searches",
 ];
 
+const proofStory = [
+  {
+    title: "Before",
+    items: [
+      "No website customers could visit",
+      "No clear place to show services or project credibility",
+      "No Google Business Profile presence when the build started",
+      "No SEO foundation, sitemap, schema, or indexed service pages",
+    ],
+  },
+  {
+    title: "Build",
+    items: [
+      "Custom Next.js website with no templates or page builders",
+      "Mobile-first service pages for excavation and demolition work",
+      "Cinematic homepage, project gallery, FAQ, and contact flow",
+      "Schema, sitemap, metadata, and Google Business Profile guidance",
+    ],
+  },
+  {
+    title: "After",
+    items: [
+      "Live professional website the company can send customers to",
+      "Clear service information, project proof, and contact path",
+      "Stronger Google presence supported by technical SEO foundations",
+      "Client-reported increase in traffic, visibility, and attention online",
+    ],
+  },
+];
+
+const clientQuote =
+  "The new website made our excavation company look a lot more professional and credible. It gave customers a clear place to see our services, learn about our work, and contact us easily. Since getting the site live and improving our Google presence with SEO, we've seen more traffic and better visibility online. It's helped us stand out as a serious business and has brought more attention to our company.";
+
 export default function PeelExcavationCaseStudy() {
   return (
     <>
@@ -64,7 +104,7 @@ export default function PeelExcavationCaseStudy() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <main>
+      <main id="main-content">
 
         {/* Hero */}
         <section
@@ -108,8 +148,8 @@ export default function PeelExcavationCaseStudy() {
 
             <p className="text-xl font-light leading-relaxed text-white/90 max-w-2xl mb-10">
               A new excavation contractor in Brampton with zero online presence. No website,
-              no Google ranking, competing against companies with years of search history.
-              Here is what I built and how I built it.
+              no clear place to show services, and no SEO foundation. Here is what I built,
+              how I built it, and what the client said after launch.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -134,12 +174,8 @@ export default function PeelExcavationCaseStudy() {
         {/* Stats bar */}
         <section className="px-6 py-0" style={{ background: "#080810" }}>
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 gap-4 -mt-6">
-              {[
-                { value: "47", label: "Days to Launch" },
-                { value: "0",  label: "Templates Used" },
-                { value: "5",  label: "Pages Built" },
-              ].map(({ value, label }) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 -mt-6">
+              {proofStats.map(({ value, label }) => (
                 <Card key={label} className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
                   <CardContent className="p-5 md:p-7 text-center">
                     <p
@@ -208,6 +244,38 @@ export default function PeelExcavationCaseStudy() {
               peelexcavationservices.netlify.app — live and running
             </p>
 
+            {/* Before / build / after */}
+            <div className="mb-16">
+              <p className="section-eyebrow mb-8">Before, Build, After</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {proofStory.map(({ title, items }) => (
+                  <Card
+                    key={title}
+                    className="rounded-2xl border-white/7 bg-card shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+                  >
+                    <CardContent className="p-6">
+                      <h2
+                        className="text-foreground leading-none mb-5"
+                        style={{ fontFamily: "var(--font-bebas)", fontSize: "2.4rem", letterSpacing: "0.02em" }}
+                      >
+                        {title}
+                      </h2>
+                      <ul className="flex flex-col gap-3">
+                        {items.map((item) => (
+                          <li key={item} className="flex items-start gap-2.5 text-sm leading-relaxed text-white/80">
+                            <Check size={14} weight="bold" className="mt-0.5 shrink-0 text-violet-400" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <Separator className="mb-16 opacity-30" />
+
             {/* The Challenge */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
               <div>
@@ -225,13 +293,15 @@ export default function PeelExcavationCaseStudy() {
                     no Google Business Profile, and no digital presence of any kind.
                   </p>
                   <p>
-                    Their competitors had years of search history, existing reviews, and
-                    established domain authority. Getting a brand-new domain to rank in that
-                    environment meant doing everything right from day one.
+                    Their competitors already had websites, established search history, and
+                    more ways for potential customers to check them out online. The job was to
+                    give Peel Excavation a credible foundation without pretending a new site
+                    would instantly outrank established companies.
                   </p>
                   <p>
-                    The goal: a fast, professional website that looked credible, ranked for
-                    local excavation searches, and converted visitors into calls.
+                    The goal: a fast, professional website that looked credible, explained the
+                    services clearly, supported local search, and made it easy for customers to
+                    get in touch.
                   </p>
                 </div>
               </div>
@@ -301,6 +371,35 @@ export default function PeelExcavationCaseStudy() {
 
             <Separator className="mb-16 opacity-30" />
 
+            {/* Client quote */}
+            <div
+              className="rounded-2xl p-8 md:p-10 mb-16"
+              style={{
+                background: "linear-gradient(145deg,rgba(109,40,217,0.1),rgba(79,70,229,0.05))",
+                border: "1px solid rgba(109,40,217,0.28)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
+              }}
+            >
+              <p className="section-eyebrow mb-5">Client Feedback</p>
+              <blockquote className="text-lg md:text-xl leading-relaxed font-light text-white/90">
+                &ldquo;{clientQuote}&rdquo;
+              </blockquote>
+              <div className="mt-6 flex items-center gap-3">
+                <div
+                  className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-white"
+                  style={{ background: "rgba(255,255,255,0.1)" }}
+                >
+                  PE
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Peel Excavation Services</p>
+                  <p className="text-xs text-white/60">Excavation & demolition contractor</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator className="mb-16 opacity-30" />
+
             {/* Timeline */}
             <div className="mb-16">
               <p className="section-eyebrow mb-8">Timeline</p>
@@ -309,7 +408,7 @@ export default function PeelExcavationCaseStudy() {
                   { phase: "Discovery",    detail: "Scope, structure, and content plan agreed." },
                   { phase: "Design + Dev", detail: "Full build from scratch. No templates, no page builders." },
                   { phase: "Review",       detail: "Client review, revisions, and final sign-off." },
-                  { phase: "Launch",       detail: "Deployed to Netlify. Schema, sitemap, and GBP guidance handed over." },
+                  { phase: "Launch",       detail: "Deployed as a static site. Schema, sitemap, and GBP guidance handed over." },
                 ].map(({ phase, detail }, i) => (
                   <div key={phase} className="flex items-start gap-5">
                     <div
@@ -325,9 +424,6 @@ export default function PeelExcavationCaseStudy() {
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-sm text-white/60 pl-13">
-                Total time from first call to live site: <span className="text-violet-300 font-semibold">47 days.</span>
-              </p>
             </div>
 
           </div>
@@ -349,12 +445,12 @@ export default function PeelExcavationCaseStudy() {
                 letterSpacing: "0.02em",
               }}
             >
-              Want Results<br />
-              <span className="text-muted-foreground">Like This?</span>
+              Want a Site<br />
+              <span className="text-muted-foreground">Built Like This?</span>
             </h2>
             <p className="text-lg font-light text-white/85 max-w-xl">
               Send me your current site or Google Business Profile link. I will send back a
-              free written audit showing exactly what is costing you calls and how to fix it.
+              free written audit showing what is helping, what is hurting, and what I would fix first.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link

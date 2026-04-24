@@ -53,7 +53,7 @@ export default function Statement() {
           className="mt-8 text-lg text-white/72 max-w-[52ch] leading-relaxed"
         >
           One developer. Direct access. No agencies, no middlemen, no templates.
-          A custom site that gets your trade found on Google, in 47 days.
+          A custom site built around your trade, your city, and the customers already searching for you.
         </motion.p>
       </div>
     </section>

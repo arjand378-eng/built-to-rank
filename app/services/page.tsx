@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Monitor, MagnifyingGlass, ArrowCircleRight, Check, ArrowRight, Star } from "@phosphor-icons/react/dist/ssr";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Navbar from "../components/Navbar";
@@ -10,8 +9,8 @@ import Footer from "../components/Footer";
 import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Services | Built to Rank — Web Design & SEO for Trades, GTA",
-  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses across the GTA. Built to rank on Google.",
+  title: "Services | Built to Rank — Web Design & SEO for Trades",
+  description: "Custom website design, local SEO setup, and monthly retainer services for trades businesses. Built for local search.",
   alternates: { canonical: "https://builttorank.ca/services" },
 };
 
@@ -19,7 +18,7 @@ const webFeatures = [
   "Mobile-first, looks great on any phone",
   "Smooth animations, premium feel",
   "Contact form that emails you directly",
-  "Live and fast in 30–47 days",
+  "Clear launch timeline before work starts",
   "SEO-ready from day one",
   "Free revisions until you're happy",
   "Fast load times on all devices",
@@ -47,22 +46,22 @@ const retainerFeatures = [
 const pricing = [
   {
     name: "Website Design",
-    from: "$500",
+    from: "$599",
     desc: "A full custom website built around your trade. No templates.",
     features: ["Up to 5 pages", "Mobile-first design", "Contact form", "Basic SEO setup", "Free revisions"],
     highlight: false,
   },
   {
     name: "Website + SEO Bundle",
-    from: "$800",
+    from: "$799",
     desc: "The full package. Custom site and complete SEO setup from day one.",
-    features: ["Everything in Website Design", "Schema markup & sitemap", "Google Business Profile guidance", "On-page keyword optimization", "Page 1 strategy"],
+    features: ["Everything in Website Design", "Schema markup & sitemap", "Google Business Profile guidance", "On-page keyword optimization", "Local search strategy"],
     highlight: true,
   },
   {
     name: "Monthly Retainer",
     from: "$299/mo",
-    desc: "Keep your site fast, fresh, and climbing Google after launch.",
+    desc: "Keep your site fast, fresh, and properly maintained after launch.",
     features: ["Monthly updates", "SEO monitoring", "Priority support", "Performance reports", "New pages on request"],
     highlight: false,
   },
@@ -72,7 +71,7 @@ export default function Services() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section
           className="relative pt-40 pb-12 px-6 overflow-hidden"
@@ -98,7 +97,7 @@ export default function Services() {
             </h1>
             <p className="mt-6 text-lg text-white/80 max-w-[56ch]">
               Custom websites. Local SEO. Ongoing support. A complete digital presence
-              built for trades businesses across the GTA.
+              built directly with the person doing the work.
             </p>
           </div>
         </section>
@@ -132,9 +131,10 @@ export default function Services() {
                     <div>
                       <h2 className="text-2xl font-bold text-foreground mb-3">Website Design & Development</h2>
                       <p className="text-base leading-relaxed text-white/85">
-                        A fully custom website built mobile-first and designed to convert
-                        visitors into booked jobs. Every detail, from the layout and copy to the
-                        animations, is built around your specific trade and your local market.
+                        A fully custom website built mobile-first and designed to build
+                        trust, explain your services clearly, and make contacting you easy.
+                        Every detail, from the layout and copy to the animations, is built
+                        around your specific trade and your local market.
                       </p>
                     </div>
                     <a
@@ -170,7 +170,7 @@ export default function Services() {
                     <h2 className="text-xl font-bold text-foreground mb-2">SEO Setup & Optimization</h2>
                     <p className="text-sm leading-relaxed text-white/80">
                       Get found when locals search for your trade. Full technical SEO setup
-                      so you rank on Google from the day your site goes live.
+                      so Google can understand your business from the day your site goes live.
                     </p>
                   </div>
                   <ul className="flex flex-col gap-2 flex-1">
@@ -185,7 +185,7 @@ export default function Services() {
                     href="/contact"
                     className={cn(buttonVariants({ variant: "outline" }), "self-start mt-auto bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-9 px-4")}
                   >
-                    Boost My Rankings
+                    Improve My SEO Setup
                   </a>
                 </CardContent>
               </Card>
@@ -202,7 +202,7 @@ export default function Services() {
                   <div>
                     <h2 className="text-xl font-bold text-foreground mb-2">Monthly Retainer</h2>
                     <p className="text-sm leading-relaxed text-white/80">
-                      Your site stays fast, fresh, and climbing the rankings. Monthly
+                      Your site stays fast, fresh, and properly maintained. Monthly
                       updates, SEO monitoring, and priority support. All handled.
                     </p>
                   </div>
@@ -239,7 +239,7 @@ export default function Services() {
               <span className="text-muted-foreground">No Hidden Fees.</span>
             </h2>
             <p className="text-base text-white/70 mb-12 max-w-[50ch]">
-              Every project gets a custom quote. These are starting points. Your final price is scoped to exactly what you need, nothing more.
+              Every project gets a clear estimate. These are starting points. Your final price is scoped to exactly what you need, nothing more.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {pricing.map(({ name, from, desc, features, highlight }) => (
@@ -284,14 +284,14 @@ export default function Services() {
                           : "bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-9 px-4"
                       )}
                     >
-                      Get a Quote
+                      Get a Free Audit
                     </a>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <p className="mt-6 text-xs text-muted-foreground text-center">
-              All prices in CAD. Final quote provided after a free discovery call. No obligation.
+              All prices in CAD. Final estimate provided after a free written audit or discovery call. No obligation.
             </p>
           </div>
         </section>
@@ -309,13 +309,13 @@ export default function Services() {
               Ready to Start?
             </h2>
             <p className="text-base text-white/80 max-w-[42ch]">
-              Free 15-minute call. Clear quote. No surprises.
+              Free written audit first. Clear next steps if it makes sense to work together.
             </p>
             <a
               href="/contact"
               className={cn(buttonVariants({ size: "lg" }), "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 gap-2 h-11 px-6")}
             >
-              Get a Free Quote <ArrowRight size={15} weight="bold" />
+              Get a Free Audit <ArrowRight size={15} weight="bold" />
             </a>
           </div>
         </section>

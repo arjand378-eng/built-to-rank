@@ -82,7 +82,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <main>
+      <main id="main-content">
         <section
           className="relative pt-40 pb-16 px-6 overflow-hidden"
           style={{ background: "linear-gradient(160deg,#0A0A14 0%,#0D0A1E 60%,#080810 100%)" }}
@@ -127,6 +127,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <Link href="/blog" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <ArrowLeft size={14} /> All Posts
               </Link>
+              <p className="text-center text-sm text-muted-foreground sm:text-right">
+                Want me to review your site or Google Business Profile?
+              </p>
               <a href="/contact" className={cn(buttonVariants({ size: "sm" }), "bg-gradient-to-br from-violet-700 to-indigo-600 text-white border-0 hover:opacity-90 gap-2")}>
                 Get a Free Audit <ArrowRight size={13} weight="bold" />
               </a>

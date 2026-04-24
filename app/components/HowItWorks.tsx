@@ -9,19 +9,19 @@ const steps = [
     number: "01",
     icon: <ChatCircle size={28} weight="duotone" />,
     title: "Tell Me Your Trade",
-    body: "We talk about your business, your city, and who you want to beat on Google. No jargon, no pressure. Usually 15 minutes.",
+    body: "You tell me about your business, your city, and who you want to compete with on Google. No jargon, no pressure. Usually 15 minutes.",
   },
   {
     number: "02",
     icon: <PaintBrush size={28} weight="duotone" />,
     title: "I Build Your Site",
-    body: "Built from scratch around your trade. You see it before it goes live and I make changes until you're happy. Most sites are live within 47 days.",
+    body: "Built from scratch around your trade. You see it before it goes live, and the timeline is scoped before the work starts.",
   },
   {
     number: "03",
     icon: <MagnifyingGlass size={28} weight="duotone" />,
-    title: "Your Phone Starts Ringing",
-    body: "Full SEO setup built in from day one. When someone Googles your trade in your city, you show up. That's the whole point.",
+    title: "You Launch Ready to Be Found",
+    body: "Full SEO setup built in from day one. The site is structured around your trade, your city, and the searches customers already make.",
   },
 ];
 

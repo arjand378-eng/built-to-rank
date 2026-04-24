@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Monitor, MagnifyingGlass, ArrowCircleRight, Check } from "@phosphor-icons/react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -8,18 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import ScrollReveal from "./ScrollReveal";
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 32 },
-  show: {
-    opacity: 1, y: 0,
-    transition: { type: "spring", stiffness: 90, damping: 20 },
-  },
-};
-const stagger: Variants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
 
 export default function Services() {
   return (
@@ -43,7 +31,7 @@ export default function Services() {
           transition={{ type: "spring", stiffness: 90, damping: 20 }}
           className="mb-16"
         >
-          <p className="section-eyebrow mb-4">What We Build</p>
+          <p className="section-eyebrow mb-4">What I Build</p>
           <h2
             className="text-foreground leading-none mb-5"
             style={{
@@ -93,16 +81,16 @@ export default function Services() {
                   <h3 className="text-xl font-bold mb-2 text-foreground">Website Design & Development</h3>
                   <p className="text-sm leading-relaxed text-white/90">
                     A fast, mobile-first website built around your trade. Shows up
-                    on Google, looks sharp on any phone, and turns visitors into calls.
+                    clearly online, looks sharp on any phone, and makes contacting you easy.
                   </p>
                 </div>
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
                     "Mobile-first, looks great on any phone",
-                    "Looks sharp on any phone or laptop",
+                    "Sharp on laptops, tablets, and jobsite screens",
                     "Contact form that emails you directly",
-                    "Live and fast in 30–47 days",
+                    "Clear launch timeline before work starts",
                     "SEO-ready from day one",
                     "Free revisions until you're happy",
                   ].map((item) => (
@@ -143,8 +131,8 @@ export default function Services() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-foreground">SEO Setup & Optimization</h3>
                   <p className="text-sm leading-relaxed text-white/80">
-                    Get found when locals search for your trade. We handle the
-                    technical side so you rank on Google.
+                    Get found when locals search for your trade. I handle the
+                    technical setup so Google can understand your business.
                   </p>
                 </div>
 
@@ -166,7 +154,7 @@ export default function Services() {
                   href="#contact"
                   className={cn(buttonVariants({ variant: "outline" }), "self-start mt-auto bg-transparent text-foreground border-white/10 hover:bg-violet-900/20 hover:border-violet-500/40 h-9 px-4 active:scale-[0.98]")}
                 >
-                  Boost My Rankings
+                  Improve My SEO Setup
                 </a>
               </CardContent>
             </Card>
@@ -193,7 +181,7 @@ export default function Services() {
                 <div>
                   <h3 className="text-xl font-bold mb-1 text-foreground">Monthly Retainer</h3>
                   <p className="text-sm leading-relaxed max-w-xl text-muted-foreground">
-                    Your site stays fast, fresh, and climbing the rankings. Monthly
+                    Your site stays fast, fresh, and properly maintained. Monthly
                     updates, SEO monitoring, speed checks, and priority support. All handled.
                   </p>
                 </div>
