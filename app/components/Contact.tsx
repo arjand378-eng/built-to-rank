@@ -247,28 +247,23 @@ export default function Contact() {
                     </div>
                   </div>
                 ))}
-                <div className="flex items-center gap-3 pt-1">
-                  <a
-                    href="https://www.facebook.com/people/Built-to-Rank/61588887140478/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Built to Rank on Facebook"
-                    className="w-9 h-9 rounded-xl flex items-center justify-center text-violet-300 hover:text-violet-200 transition-colors"
-                    style={{ background: "rgba(109,40,217,0.12)", border: "1px solid var(--border-accent)" }}
-                  >
-                    <FacebookLogo size={17} weight="duotone" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/builttorank.ca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Built to Rank on Instagram"
-                    className="w-9 h-9 rounded-xl flex items-center justify-center text-violet-300 hover:text-violet-200 transition-colors"
-                    style={{ background: "rgba(109,40,217,0.12)", border: "1px solid var(--border-accent)" }}
-                  >
-                    <InstagramLogo size={17} weight="duotone" />
-                  </a>
-                </div>
+                {[
+                  { icon: <FacebookLogo size={17} weight="duotone" />, label: "Facebook", value: "Built to Rank", href: "https://www.facebook.com/people/Built-to-Rank/61588887140478/" },
+                  { icon: <InstagramLogo size={17} weight="duotone" />, label: "Instagram", value: "@builttorank.ca", href: "https://www.instagram.com/builttorank.ca/" },
+                ].map(({ icon, label, value, href }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <div
+                      className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 text-violet-300"
+                      style={{ background: "rgba(109,40,217,0.12)", border: "1px solid var(--border-accent)" }}
+                    >
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground">{label}</p>
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-foreground hover:text-violet-300 transition-colors">{value}</a>
+                    </div>
+                  </div>
+                ))}
               </CardContent>
             </Card>
 
